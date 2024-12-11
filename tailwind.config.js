@@ -8,10 +8,13 @@ export default {
   theme: {
 	extend: {
       // Fuentes personalizadas
-      fontFamily: { 
+
+      fontFamily: {
         'poppins': ['Poppins', 'sans-serif'],
         'josefin-sans': ['Josefin Sans', 'sans-serif'],
         'parkinsans': ['Parkinsans', 'sans-serif'],
+        // lilita one
+        'lilita-one': ['Lilita One', 'cursive'],
       },
   },
   },

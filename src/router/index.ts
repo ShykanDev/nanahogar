@@ -20,16 +20,53 @@ const router = createRouter({
       component: () => import('../views/SpaOneView.vue'),
     },
     {
-      path: '/ingredientes',
-      name: 'spaTwo',
-      component: () => import('../views/SpaTwoView.vue'),
+      path: '/nosotros',
+      name: 'us',
+      component: () => import('../views/AboutUsView.vue'),
     },
     {
       path: '/preguntas',
-      name: 'spaThree',
-      component: () => import('../views/SpaThreeView.vue'),
+      name: 'faqs',
+      component: () => import('../views/FaqsView.vue'),
     },
+    {
+      path:'/terminos',
+      name:'terms',
+      component: () => import('../views/TermsView.vue'),
+    },
+    {
+      path: '/politica',
+      name: 'policy',
+      component: () => import('../views/PolicyView.vue'),
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: () => import('../views/LoginView.vue'),
+    },
+    {
+      path: '/registro',
+      name: 'register',
+      component: () => import('../views/CreateAccountView.vue'),
+    },
+    {
+      path: '/consejos',
+        name: 'advices',
+      component: () => import('../views/AdvicesView.vue'),
+    },
+    {
+      path: '/:patchMatch(.*)',
+      redirect:{name:'home'}
+    }
   ],
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      return { top: 0 }
+    }
+  },
+
 })
 
 export default router

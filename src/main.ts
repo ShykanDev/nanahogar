@@ -7,8 +7,8 @@ import App from './App.vue'
 import router from './router'
 
 import { OhVueIcon, addIcons } from 'oh-vue-icons'
-import { FaFlag, RiZhihuFill } from 'oh-vue-icons/icons'
-addIcons(FaFlag, RiZhihuFill)
+import { FaFlag, RiZhihuFill,PrTimes } from 'oh-vue-icons/icons'
+addIcons(FaFlag, RiZhihuFill,PrTimes)
 import AOS from 'aos'
 import 'aos/dist/aos.css' // You can also use <link> for styles
 // ..

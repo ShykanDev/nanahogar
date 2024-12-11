@@ -1,144 +1,139 @@
 <template>
   <div class="">
-    <header class="sticky top-0 z-50 w-full">
-      <section></section>
-      <section class="w-full bg-white">
-        <div
-          class="flex justify-start w-full py-2 space-x-4 text-lg bg-white px-9 font-josefin-sans"
-        >
-          <RouterLink
-            :class="{ 'border-b-orange-500 border-b-2 ': route.name === 'home' }"
-            :to="{ name: 'home' }"
-            >Inicio</RouterLink
-          >
-          <RouterLink
-            :class="{ 'border-b-orange-500 border-b-2': route.name === 'spaOne' }"
-            :to="{ name: 'spaOne' }"
-            >Beneficios</RouterLink
-          >
-          <RouterLink
-            :class="{ 'border-b-orange-500 border-b-2': route.name === 'spaTwo' }"
-            :to="{ name: 'spaTwo' }"
-            >Ingredientes</RouterLink
-          >
-          <RouterLink
-            :class="{ 'border-b-orange-500 border-b-2': route.name === 'spaThree' }"
-            :to="{ name: 'spaThree' }"
-            >Preguntas</RouterLink
-          >
-          <RouterLink
-            :class="{ 'border-b-orange-500 border-b-2': route.name === 'non' }"
-            :to="{ name: 'home' }"
-            >Prasadam</RouterLink
-          >
-        </div>
-        <div
-          class="flex items-center justify-around py-1 text-xl text-white bg-orange-400 shadow-md font-poppins"
-        >
-          <img class="w-12" src="../assets/ssl-certificate.png" alt="" />
-          <p class="font-parkinsans">medicinaparaartritis.com</p>
-          <img class="w-12" src="https://medicinaparaansiedad.com/img/logo.png" alt="" />
-        </div>
-      </section>
-    </header>
+    <header class="sticky top-0 z-50 bg-white shadow-md font-poppins">
+    <div class="container flex items-center justify-between px-6 py-4 mx-auto">
+      <!-- Logo -->
+      <div class="flex items-center space-x-3">
+        <img src="../assets/img/header/retrowoman3.svg" alt="Logo" class="w-8">
+        <!-- <span class="text-xl font-bold text-gray-800">Nanahogar</span> -->
+      </div>
+
+      <!-- Navegación -->
+      <nav class="hidden space-x-6 md:flex">
+        <router-link :to="{ name: 'home' }" class="text-gray-600 hover:text-gray-800">Inicio</router-link>
+<router-link :to="{ name: 'login' }" class="text-gray-600 hover:text-gray-800">Historias</router-link>
+<router-link :to="{ name: 'advices' }" class="text-gray-600 hover:text-gray-800">Consejos Útiles</router-link>
+<router-link :to="{ name: 'login' }" class="text-gray-600 hover:text-gray-800">Participar</router-link>
+<router-link :to="{ name: 'policy' }" class="text-gray-600 hover:text-gray-800">Política de privacidad</router-link>
+<router-link :to="{ name: 'us' }" class="text-gray-600 hover:text-gray-800">Nosotros</router-link>
+<router-link :to="{ name: 'faqs' }" class="text-gray-600 hover:text-gray-800">Ayuda</router-link>
+
+      </nav>
+
+      <!-- CTA y Extras -->
+      <div class="flex items-center space-x-4">
+       <RouterLink :to="{ name: 'login' }"           class="px-4 py-2 text-white bg-blue-600 rounded-md shadow hover:bg-blue-700"
+       >Comparte tu historia</RouterLink>
+        <button @click="useHeaderStore().toggleMenu" :class="{'opacity-0': storeHeader.isMenuToggled, 'animate-jump-in' : !storeHeader.isMenuToggled}" class="text-gray-600 md:hidden hover:text-gray-800">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
     <main class="overflow-hidden">
+      <!-- sidebar -->
+       <aside @click="storeHeader.toggleMenu()" :class="{'translate-x-0': useHeaderStore().isMenuToggled, 'translate-x-full' : !storeHeader.isMenuToggled } " class="fixed top-0 bottom-0 left-0 right-0 z-50 w-full transition-transform duration-200 ease-out cursor-pointer bg-opacity-80 bg-slate-700 md:hidden">
+        <v-icon name="pr-times" class="absolute top-0 right-0 text-black" scale="3.1"  />
+        <!-- <h2 class="absolute text-2xl font-bold text-slate-800 top-4 left-4">nanahogar.com</h2> -->
+         <div v-if="storeHeader.isMenuToggled" class="absolute flex items-center justify-center text-2xl font-bold text-slate-800 top-4 left-4"><span class="animate-fade-up animate-delay-0">nana</span><span class="animate-fade-down animate-delay-200">hogar</span><span class="animate-fade-up animate-delay-300">.com</span></div>
+        <!-- nav menu for mobile only -->
+        <article class="flex flex-col items-center w-full h-full text-xl bg-white justify-evenly font-poppins">
+          <RouterLink :class="{'animate-fade-left animate-delay-0' : storeHeader.isMenuToggled}" :to="{name:'home'}">
+  <i class="fas fa-home"></i> Inicio
+</RouterLink>
+<RouterLink :class="{'animate-fade-left animate-delay-200' : storeHeader.isMenuToggled}" :to="{name:'home'}">
+  <i class="fas fa-user"></i> Iniciar Sesión
+</RouterLink>
+<RouterLink :class="{'animate-fade-left animate-delay-75' : storeHeader.isMenuToggled}" :to="{name:'home'}">
+  <i class="fas fa-book-open"></i> Historias
+</RouterLink>
+<RouterLink :class="{'animate-fade-left animate-delay-100' : storeHeader.isMenuToggled}" :to="{name:'home'}">
+  <i class="fas fa-lightbulb"></i> Consejos Útiles
+</RouterLink>
+<RouterLink :class="{'animate-fade-left animate-delay-150' : storeHeader.isMenuToggled}" :to="{name:'home'}">
+  <i class="fas fa-users"></i> Participar
+</RouterLink>
+
+<RouterLink :class="{'animate-fade-left animate-delay-200' : storeHeader.isMenuToggled}" :to="{name:'terms'}">
+  <i class="fas fa-user"></i> Terminos y condiciones
+</RouterLink>
+<RouterLink :class="{'animate-fade-left animate-delay-200' : storeHeader.isMenuToggled}" :to="{name:'terms'}">
+  <i class="fas fa-user"></i> Politica de privacidad
+</RouterLink>
+
+        </article>
+       </aside>
       <slot name="main"> </slot>
     </main>
-    <footer class="relative w-full p-6 text-white bg-orange-800 font-poppins">
-      <!-- Sección Título -->
-      <div class="mb-6 text-center">
-        <h2 class="text-3xl font-bold lg:text-5xl">Contacto</h2>
-      </div>
+    <footer class="relative w-full p-6 bg-white border-t-2 text-sky-700 font-poppins border-t-sky-700">
 
-      <!-- Imagen de seguridad SSL -->
-      <div class="absolute top-4 right-4">
-        <img
-          class="w-12 lg:w-16"
-          src="https://shykandev.github.io/medicinaparadiabetes/assets/ssl-Cjd7i8VT.png"
-          alt="SSL Seguridad"
-        />
-      </div>
 
-      <!-- Dirección -->
-      <div class="mb-8 text-center">
-        <div class="flex items-center justify-center gap-2 mb-4">
-          <i class="text-3xl fas fa-map-marker-alt lg:text-4xl"></i>
-          <a
-            href="https://www.google.com.mx/maps/place/Gutenberg+128,+Anzures,+Miguel+Hidalgo,+11590+Ciudad+de+México,+CDMX"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-sm font-bold lg:text-lg hover:underline"
-          >
-            Gutenberg #128 Anzures, Miguel Hidalgo, 11590 Ciudad de México
-          </a>
-        </div>
-        <iframe
-          class="w-full h-48 lg:h-72"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.5395970522604!2d-99.1760704!3d19.4322888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f8b32758939b%3A0xf34fbd07bc47d6dd!2sGutenberg%20128%2C%20Anzures%2C%20Miguel%20Hidalgo%2C%2011590%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1sen!2smx!4v1730328617197!5m2!1sen!2smx"
-          allowfullscreen="false"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          style="border: 0"
-        ></iframe>
-      </div>
+  <!-- Imagen de seguridad SSL -->
+  <div class="absolute top-4 right-4">
+    <i class="text-3xl fas fa-shield-alt text-sky-700"></i>
+  </div>
 
-      <!-- Sección de Contactos -->
-      <div class="flex flex-wrap justify-around gap-8 mb-8 text-center">
-        <!-- Teléfonos -->
-        <div class="flex flex-col items-center">
-          <i class="mb-2 text-3xl fas fa-phone"></i>
-          <a href="tel:+525563950178" class="text-sm font-bold lg:text-lg hover:text-orange-500">
-            +52 55 6395 0178
-          </a>
-        </div>
-        <div class="flex flex-col items-center">
-          <i class="mb-2 text-3xl fas fa-phone"></i>
-          <a href="tel:+525563950179" class="text-sm font-bold lg:text-lg hover:text-orange-500">
-            +52 55 6395 0179
-          </a>
-        </div>
+  <!-- Dirección -->
+  <!-- <div class="mb-8 text-center">
+    <div class="flex items-center justify-center gap-2 mb-4">
+      <i class="text-3xl fas fa-map-signs lg:text-4xl"></i>
+      <RouterLink
+        :to="{name:'home'}"
+        class="text-sm font-bold lg:text-lg hover:underline"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Gutenberg #128 Anzures, Miguel Hidalgo, 11590 Ciudad de México
+      </RouterLink>
+    </div>
+  </div> -->
 
-        <!-- Email -->
-        <div class="flex flex-col items-center">
-          <i class="mb-2 text-3xl fas fa-envelope"></i>
-          <a
-            href="mailto:informes@prasadam.mx"
-            class="text-sm font-bold lg:text-lg hover:text-orange-500"
-          >
-            informes@prasadam.mx
-          </a>
-        </div>
+  <!-- Sección adicional de información -->
+  <div class="mb-8 text-center">
+    <p class="mb-4 font-semibold text-gray-950">
+      Sitio gratuito y de uso exclusivo para revisar y compartir experiencias.
+    </p>
+    <p class="mb-4 text-gray-950">
+      Reclame con sus experiencias, descubra con las de otros. ¿Tiene algún reclamo? Comente aquí sus experiencias y hagamos saber nuestras inconformidades acerca de un servicio, empresa, producto, persona y más.
+    </p>
+  </div>
 
-        <!-- WhatsApp -->
-        <div class="flex flex-col items-center">
-          <i class="mb-2 text-3xl fab fa-whatsapp"></i>
-          <a
-            href="https://wa.me/525562516687"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-sm font-bold lg:text-lg hover:text-orange-500"
-          >
-            +52 5562516687
-          </a>
-        </div>
-      </div>
+  <!-- Sección de enlaces principales -->
+  <div class="grid grid-cols-2 gap-4 mb-8 text-center md:grid-cols-3">
+    <RouterLink :to="{name:'home'}" class="font-semibold underline text-sky-900 hover:text-sky-500">Página Principal</RouterLink>
+    <RouterLink :to="{name:'us'}" class="font-semibold underline text-sky-900 hover:text-sky-500">Nosotros</RouterLink>
+    <RouterLink :to="{name:'faqs'}" class="font-semibold underline text-sky-900 hover:text-sky-500">Ayuda</RouterLink>
+    <RouterLink :to="{name:'login'}" class="font-semibold underline text-sky-900 hover:text-sky-500">Comentarios</RouterLink>
+    <RouterLink :to="{name:'home'}" class="font-semibold underline text-sky-900 hover:text-sky-500">Contacto</RouterLink>
+    <!-- <RouterLink :to="{name:'home'}" class="font-semibold underline text-sky-900 hover:text-sky-500">Acciones</RouterLink> -->
+    <RouterLink :to="{name:'register'}" class="font-semibold underline text-sky-900 hover:text-sky-500">Crear Registro</RouterLink>
+    <RouterLink :to="{name:'login'}" class="font-semibold underline text-sky-900 hover:text-sky-500">Iniciar Sesión</RouterLink>
+    <!-- <RouterLink :to="{name:'home'}" class="font-semibold underline text-sky-900 hover:text-sky-500">Seguridad</RouterLink> -->
+    <RouterLink :to="{name:'policy'}" class="font-semibold underline text-sky-900 hover:text-sky-500">Aviso de Privacidad</RouterLink>
+    <RouterLink :to="{name:'terms'}" class="font-semibold underline text-sky-900 hover:text-sky-500">Términos y Condiciones</RouterLink>
+  </div>
 
-      <!-- Pie de página -->
-      <div class="text-center">
-        <p class="mb-2 text-sm font-bold lg:text-lg">
-          Todos los derechos reservados &copy; {{ new Date().getFullYear() }}
-        </p>
-        <p class="text-sm lg:text-lg">Design by <strong>PACA</strong></p>
-      </div>
-    </footer>
+  <!-- Pie de página -->
+  <div class="text-center">
+    <p class="mb-2 text-sm font-bold lg:text-lg">
+      Todos los derechos reservados &copy; {{ new Date().getFullYear() }}
+    </p>
+    <p class="text-sm lg:text-lg">Design by <strong>PACA</strong></p>
+  </div>
+</footer>
+
+
   </div>
 </template>
 
 <script lang="ts" setup>
-import IntroCard from '@/components/IntroCard.vue'
-import { useRoute } from 'vue-router'
+import { useHeaderStore } from '@/stores/UseHeaderStore';
 
-const route = useRoute()
+
+
+const storeHeader = useHeaderStore() ;
 </script>
 
 <style scoped></style>

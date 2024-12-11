@@ -1,951 +1,309 @@
 <template>
-  <div class="">
-    <MainLayout>
-      <template #main>
-        <section>
-          <IntroCard />
-        </section>
-        <section class="py-8 font-poppins">
-          <h2
-            class="py-6 mb-6 text-2xl font-bold text-center text-white bg-orange-600 font-poppins"
-          >
-            Cómo Flex-Imac Forte Le Ayuda con la Gestión de la Salud muscular y articular
-          </h2>
-          <div class="container px-4 mx-auto">
-            <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-              <div data-aos="zoom-out-right" class="p-6 bg-white rounded-lg shadow-lg">
-                <img
-                  alt="Imagen de una persona estirándose para mostrar flexibilidad muscular"
-                  class="object-cover w-full h-40 rounded-t-lg"
-                  height="200"
-                  src="https://storage.googleapis.com/a1aa/image/yr5JQpgflVVfJ0oTeotwz7wetXfWfPqsV9BZk6yBFZ2HaGa9E.jpg"
-                  width="300"
-                />
-                <h3 class="mt-4 text-xl font-bold text-slate-700">
-                  Mejora la Flexibilidad Muscular
-                </h3>
-                <p class="mt-2">
-                  Flex-Imac Forte ayuda a mejorar la flexibilidad muscular, permitiéndote moverte
-                  con más libertad y comodidad.
-                </p>
-                <ul class="mt-4">
-                  <li class="flex items-center">
-                    <i class="mr-2 text-green-500 fas fa-check"> </i>
-                    Reduce la rigidez muscular
-                  </li>
-                  <li class="flex items-center">
-                    <i class="mr-2 text-green-500 fas fa-check"> </i>
-                    Mejora el rango de movimiento
-                  </li>
-                  <li class="flex items-center">
-                    <i class="mr-2 text-green-500 fas fa-check"> </i>
-                    Promueve la relajación muscular
-                  </li>
-                </ul>
-              </div>
-              <div data-aos="zoom-out-right" class="p-6 bg-white rounded-lg shadow-lg">
-                <img
-                  alt="Imagen de una persona sosteniendo su rodilla para mostrar alivio del dolor articular"
-                  class="object-cover w-full h-40 rounded-t-lg"
-                  height="200"
-                  src="https://storage.googleapis.com/a1aa/image/8ZgUDzoP7VYyF9cjdUTrn8fI3jOJ0vLFhRetfFkeLQC1ghWPB.jpg"
-                  width="300"
-                />
-                <h3 class="mt-4 text-xl font-bold text-slate-700">Alivia el Dolor Articular</h3>
-                <p class="mt-2">
-                  Nuestro suplemento está diseñado para aliviar el dolor articular, haciendo que las
-                  actividades diarias sean más manejables.
-                </p>
-                <ul class="mt-4">
-                  <li class="flex items-center">
-                    <i class="mr-2 text-green-500 fas fa-check"> </i>
-                    Reduce la inflamación
-                  </li>
-                  <li class="flex items-center">
-                    <i class="mr-2 text-green-500 fas fa-check"> </i>
-                    Alivia la incomodidad articular
-                  </li>
-                  <li class="flex items-center">
-                    <i class="mr-2 text-green-500 fas fa-check"> </i>
-                    Apoya la salud articular
-                  </li>
-                </ul>
-              </div>
-              <div data-aos="zoom-out-right" class="p-6 bg-white rounded-lg shadow-lg">
-                <img
-                  alt="Imagen de una persona levantando pesas para mostrar fuerza muscular"
-                  class="object-cover w-full h-40 rounded-t-lg"
-                  height="200"
-                  src="https://storage.googleapis.com/a1aa/image/UEPAJlyQeTRLK6srr60pgtOO1u67xn13VVDnuqDRJWePYo1TA.jpg"
-                  width="300"
-                />
-                <h3 class="mt-4 text-xl font-bold text-slate-700">Mejora la Fuerza Muscular</h3>
-                <p class="mt-2">
-                  Flex-Imac Forte ayuda a desarrollar la fuerza muscular, ayudándote a mantenerte
-                  activo y fuerte.
-                </p>
-                <ul class="mt-4">
-                  <li class="flex items-center">
-                    <i class="mr-2 text-green-500 fas fa-check"> </i>
-                    Aumenta la resistencia muscular
-                  </li>
-                  <li class="flex items-center">
-                    <i class="mr-2 text-green-500 fas fa-check"> </i>
-                    Incrementa la potencia muscular
-                  </li>
-                  <li class="flex items-center">
-                    <i class="mr-2 text-green-500 fas fa-check"> </i>
-                    Apoya la recuperación muscular
-                  </li>
-                </ul>
-              </div>
-              <div data-aos="zoom-out-left" class="p-6 bg-white rounded-lg shadow-lg">
-                <img
-                  alt="Imagen de una persona haciendo yoga para mostrar bienestar general"
-                  class="object-cover w-full h-40 rounded-t-lg"
-                  height="200"
-                  src="https://storage.googleapis.com/a1aa/image/tPviPpHTcUKyLp0W9TFiCnI110hyuhy9k2jDWjoQurIEGa9E.jpg"
-                  width="300"
-                />
-                <h3 class="mt-4 text-xl font-bold text-slate-700">Promueve el Bienestar General</h3>
-                <p class="mt-2">
-                  Nuestro producto no solo se enfoca en problemas específicos, sino que también
-                  promueve el bienestar y la salud en general.
-                </p>
-                <ul class="mt-4">
-                  <li class="flex items-center">
-                    <i class="mr-2 text-green-500 fas fa-check"> </i>
-                    Mejora los niveles de energía
-                  </li>
-                  <li class="flex items-center">
-                    <i class="mr-2 text-green-500 fas fa-check"> </i>
-                    Apoya la función inmunológica
-                  </li>
-                  <li class="flex items-center">
-                    <i class="mr-2 text-green-500 fas fa-check"> </i>
-                    Mejora la calidad de vida
-                  </li>
-                </ul>
-              </div>
-              <div data-aos="zoom-out-left" class="p-6 bg-white rounded-lg shadow-lg">
-                <img
-                  alt="Imagen de una persona corriendo para mostrar movilidad mejorada"
-                  class="object-cover w-full h-40 rounded-t-lg"
-                  height="200"
-                  src="https://storage.googleapis.com/a1aa/image/UhrUVewNjr3hOiarRWenMPruGApgzkPBXzYWeauNrkqmwQrnA.jpg"
-                  width="300"
-                />
-                <h3 class="mt-4 text-xl font-bold text-slate-700">Mejora la Movilidad</h3>
-                <p class="mt-2">
-                  Flex-Imac Forte ayuda a mejorar la movilidad, facilitando la realización de tareas
-                  y actividades diarias.
-                </p>
-                <ul class="mt-4">
-                  <li class="flex items-center">
-                    <i class="mr-2 text-green-500 fas fa-check"> </i>
-                    Mejora la flexibilidad articular
-                  </li>
-                  <li class="flex items-center">
-                    <i class="mr-2 text-green-500 fas fa-check"> </i>
-                    Reduce las restricciones de movimiento
-                  </li>
-                  <li class="flex items-center">
-                    <i class="mr-2 text-green-500 fas fa-check"> </i>
-                    Promueve un estilo de vida activo
-                  </li>
-                </ul>
-              </div>
-              <div data-aos="zoom-out-left" class="p-6 bg-white rounded-lg shadow-lg">
-                <img
-                  alt="Imagen de una persona masajeando su hombro para mostrar alivio del dolor muscular"
-                  class="object-cover w-full h-40 rounded-t-lg"
-                  height="200"
-                  src="https://storage.googleapis.com/a1aa/image/7ce2Wd1J4gThViNW7eoXT5OUELKyGRUoEkqRbSBwEv8SYo1TA.jpg"
-                  width="300"
-                />
-                <h3 class="mt-4 text-xl font-bold text-slate-700">Alivia el Dolor Muscular</h3>
-                <p class="mt-2">
-                  Nuestro suplemento es efectivo para aliviar el dolor muscular, proporcionando
-                  alivio y comodidad.
-                </p>
-                <ul class="mt-4">
-                  <li class="flex items-center">
-                    <i class="mr-2 text-green-500 fas fa-check"> </i>
-                    Reduce el dolor muscular
-                  </li>
-                  <li class="flex items-center">
-                    <i class="mr-2 text-green-500 fas fa-check"> </i>
-                    Alivia la tensión muscular
-                  </li>
-                  <li class="flex items-center">
-                    <i class="mr-2 text-green-500 fas fa-check"> </i>
-                    Promueve la recuperación muscular
-                  </li>
-                </ul>
-              </div>
-            </div>
+    <div class="">
+      <MainLayout>
+        <template #main>
+          <div class="flex-wrap justify-center px-1 lg:px-6 lg:w-full lg:flex lg:justify-between lg:flex-nowrap ">
+            <article>
+              <h1 class="py-1 mb-4 text-2xl text-left uppercase md:mb-8 md:py-4 text-slate-700 md:text-5xl font-lilita-one">Un espacio para compartir sobre experiencias de asesoras del hogar</h1>
+              <h2 class="pr-2 font-poppins text-slate-600">Queremos conocer tu experiencia: ya sea positiva o negativa, cada historia es importante. Comparte tus vivencias con las asesoras del hogar para ayudar a otros a tomar decisiones informadas. Tu testimonio puede hacer una gran diferencia en la elección de la persona adecuada para el hogar. ¡No dudes en contar tu historia y ser parte de esta comunidad de apoyo!</h2>
+              <div class="flex flex-wrap mt-5 space-x-2 space-y-1 font-poppins">
+  <a href="#opiniones" class="p-1 text-white border rounded-lg minh bg-sky-800 animate-fade-left">
+    <i class="fas fa-comment-alt"></i> Opiniones
+  </a>
+  <router-link :to="{ name: 'login' }" class="p-1 text-white border rounded-lg minh bg-sky-800 animate-fade-left animate-delay-100">
+    <i class="fas fa-thumbs-up"></i> Recomendaciones
+  </router-link>
+  <router-link :to="{ name: 'us' }" class="p-1 text-white border rounded-lg minh bg-sky-800 animate-fade-left animate-delay-200">
+    <i class="fas fa-users"></i> Nosotros
+  </router-link>
+  <router-link :to="{ name: 'login' }" class="p-1 text-white border rounded-lg minh bg-sky-800 animate-fade-left animate-delay-300">
+    <i class="fas fa-comment-dots"></i> Comentar
+  </router-link>
+</div>
+
+
+              <div class="flex mt-3 space-x-4">
+        <router-link to="/registro" class="flex items-center px-4 py-2 space-x-2 text-white bg-blue-500 rounded hover:bg-blue-600">
+            <i class="fas fa-user-plus"></i>
+            <span>Registrarse</span>
+        </router-link>
+        <router-link to="/login" class="flex items-center px-4 py-2 space-x-2 text-white bg-green-600 rounded hover:bg-green-700">
+            <i class="fas fa-sign-in-alt"></i>
+            <span>Iniciar Sesión</span>
+        </router-link>
+    </div>
+            </article>
+
+            <img :src="imgHeader" alt="" :key="imgHeader" class="py-3 animate-fade-up lg:w-1/2 md:w-1/2">
           </div>
-        </section>
-
-        <section class="flex flex-wrap justify-around w-full gap-2 px-2 mt-5 space-y-3">
-          <InfoCardMain
-            data-aos="zoom-in-up"
-            title="Potencia Musculoesquelética"
-            summary="Fortalece tu sistema musculoesquelético con ingredientes tradicionales como Ashwagandha y Rasna. Estas hierbas son reconocidas en la medicina ayurvédica por su capacidad para regenerar tejidos dañados, aliviar el estrés muscular y mejorar la recuperación tras lesiones. Este suplemento está formulado para aumentar la resistencia física, prevenir el desgaste de los músculos y proteger los ligamentos. Ideal para quienes buscan mantener un estilo de vida activo y saludable."
-            image="https://storage.googleapis.com/a1aa/image/fPJziQLJQMSjdyFrMfbR64dHjPsHEOZ7zOvGkixJheabuOrnA.jpg"
-          />
-          <InfoCardMain
-            data-aos="zoom-in-up"
-            title="Alivio Natural de Dolor"
-            summary="Experimenta un alivio eficaz del dolor articular y muscular gracias a la acción sinérgica de Boswellia serrata y Curcuma longa. Estos poderosos ingredientes ayudan a reducir la inflamación, bloqueando enzimas responsables de causar molestias en las articulaciones. Además, alivian el dolor crónico asociado con condiciones como artritis y lesiones deportivas. Este enfoque natural proporciona una alternativa segura y efectiva para mantener tu movilidad sin los efectos secundarios de analgésicos químicos."
-            image="https://storage.googleapis.com/a1aa/image/rsmDWdajDbKJHZef3sUQQXrOME7e2ZcO0QYFIurvludjxOrnA.jpg"
-          />
-          <InfoCardMain
-            data-aos="zoom-in-up"
-            title="Flexibilidad Óptima"
-            summary="Recupera la flexibilidad perdida en tus articulaciones con la ayuda de Vitex negundo y Ricinus communis. Estas plantas son conocidas por su capacidad para relajar músculos tensos, lubricar las articulaciones y mejorar el rango de movimiento. Al promover la elasticidad natural de los tejidos, esta fórmula es ideal para quienes sufren de rigidez matutina o tienen estilos de vida que requieren constante movimiento."
-            image="https://storage.googleapis.com/a1aa/image/BJIOvITonXIFKNdQUMJHTHAfTeCyAkDzOcGvhYQOAXj9Zn1TA.jpg"
-          />
-          <InfoCardMain
-            data-aos="zoom-in-up"
-            title="Bienestar Digestivo"
-            summary="Un sistema digestivo saludable es clave para absorber los nutrientes necesarios para huesos y músculos. Este suplemento incluye Lactobacillus sporogenes, un probiótico que mejora la salud intestinal, equilibra la flora bacteriana y promueve una mejor absorción de minerales esenciales como calcio y magnesio. Esto no solo beneficia tu digestión, sino también tu sistema inmunológico y tu vitalidad general."
-            image="https://storage.googleapis.com/a1aa/image/Qb1U9O8DSMrMGtVcBOtArC5fE6oSzQ3GIfYlduzWv0Adan1TA.jpg"
-          />
-          <InfoCardMain
-            data-aos="zoom-in-up"
-            title="Protección Antioxidante"
-            summary="Combate el envejecimiento celular con antioxidantes naturales provenientes de Curcuma longa y Zingiber officinale. Estos ingredientes ayudan a neutralizar los radicales libres, responsables del daño celular y la inflamación. Su consumo regular puede retrasar el deterioro de huesos y articulaciones, promoviendo una regeneración más rápida de los tejidos. Además, mejoran tu piel y tu sistema inmunológico."
-            image="https://storage.googleapis.com/a1aa/image/cBWIbdv6pw6GANUdb6eP3fRow2vwgvRH1dsaMWcOUvJ3an1TA.jpg"
-          />
-          <InfoCardMain
-            data-aos="zoom-in-up"
-            title="Rejuvenecimiento Óseo"
-            summary="Mantén tus huesos fuertes y saludables con Shilajit y Boswellia serrata, dos ingredientes clave para prevenir el deterioro óseo. Shilajit, rico en minerales esenciales como calcio y fósforo, estimula la regeneración ósea, mientras que Boswellia reduce la inflamación que afecta las articulaciones. Esta fórmula es ideal para quienes buscan fortalecer su estructura ósea y reducir los riesgos de fracturas."
-            image="https://storage.googleapis.com/a1aa/image/t7cBSi2xXq5YBxU1vFiwyHDlIVllv2dKYMvFOSjd6iSQ3Z9E.jpg"
-          />
-          <InfoCardMain
-            data-aos="zoom-in-up"
-            title="Movimiento Sin Límites"
-            summary="Recupera la libertad de movimiento con Rasna y Vitex negundo. Estas plantas trabajan para desinflamar las articulaciones, lubricar los cartílagos y reducir las molestias causadas por el desgaste físico. Ideal para personas con trabajos físicamente exigentes, deportistas o quienes sufren de rigidez crónica debido al envejecimiento."
-            image="https://storage.googleapis.com/a1aa/image/D4OYWGCnA2Lee0VGP5prsvIL4iL8Ckg9iSG0qffBNNGO2dWPB.jpg"
-          />
-          <InfoCardMain
-            data-aos="zoom-in-up"
-            title="Apoyo en Artritis"
-            summary="Maneja eficazmente los síntomas de la artritis con esta mezcla de hierbas diseñada para reducir la inflamación y mejorar la movilidad. Boswellia serrata bloquea los químicos que agravan el dolor, mientras que Curcuma longa trabaja para aliviar la rigidez y mejorar la calidad de vida. Este suplemento es perfecto como complemento de tratamientos médicos para el control de la artritis."
-            image="https://storage.googleapis.com/a1aa/image/zN4GuPtbkr50GZJp46lfS81Sxmood9Usxpn2mqdFT3dKvz6JA.jpg"
-          />
-          <InfoCardMain
-            data-aos="zoom-in-up"
-            title="Resistencia Física Mejorada"
-            summary="Mejora tu energía y resistencia diaria con Ashwagandha, una hierba adaptógena que equilibra el estrés físico y mental. Esta fórmula ayuda a combatir la fatiga, mejorar el rendimiento físico y acelerar la recuperación muscular tras actividades intensas. Es ideal para deportistas, personas activas y quienes buscan un impulso natural de energía."
-            image="https://storage.googleapis.com/a1aa/image/3LdV0aEGAAqdFpNksfn84cBdscC6hinr6djQMQrqvenEfOrnA.jpg"
-          />
-          <InfoCardMain
-            data-aos="zoom-in-up"
-            title="Inflamación Bajo Control"
-            summary="Reduce eficazmente la inflamación crónica y aguda con una fórmula basada en Boswellia serrata y Rasna. Estas hierbas actúan directamente sobre las enzimas inflamatorias para aliviar el dolor y mejorar la calidad de vida. Útil para quienes buscan manejar lesiones deportivas o condiciones inflamatorias como la artritis."
-            image="https://storage.googleapis.com/a1aa/image/spfnsAQvRkyJSCU064oVai3zJXrt2NuamfNl83lrV4QCgn1TA.jpg"
-          />
-          <InfoCardMain
-            data-aos="zoom-in-up"
-            title="Regeneración Celular"
-            summary="Estimula la regeneración celular con una mezcla única de Shilajit y Curcuma longa. Estos ingredientes no solo favorecen la reparación de tejidos musculares y articulares, sino que también promueven la salud general del cuerpo. Ideales para acelerar la recuperación tras lesiones o cirugías."
-            image="https://storage.googleapis.com/a1aa/image/LijsZpZeEZ0SHSyTzAGD6EsV7yYepXTqHvcRSDkF0SUdgn1TA.jpg"
-          />
-          <InfoCardMain
-            data-aos="zoom-in-up"
-            title="Equilibrio Holístico"
-            summary="Disfruta de un enfoque integral que combina los beneficios de los probióticos y la sabiduría de la Ayurveda. Este suplemento está diseñado para equilibrar tu cuerpo, mejorar tu salud intestinal y fortalecer tu sistema musculoesquelético. Perfecto para quienes buscan una solución natural y efectiva para su bienestar general."
-            image="https://storage.googleapis.com/a1aa/image/IOFNwxSs2LrAIxKfEt7OaeYONnOP7FekAVe1n3WKOsLLDeseE.jpg"
-          />
-        </section>
-
-        <section class="flex justify-center p-4 px-3 mt-5 text-white bg-green-600">
-          <h1 class="text-3xl font-bold">
-            Flex-Imac Forte, una medicina ayurvedica para mejorar tu estilo de vida
-          </h1>
-        </section>
-
-        <section class="p-6 font-poppins">
-          <section class="mb-8">
-            <h2 class="mb-4 text-2xl font-bold">¿Qué es la Medicina Ayurvédica?</h2>
-            <p class="mb-4 font-poppins">
-              La medicina ayurvédica, también conocida como Ayurveda, es un sistema de medicina
-              tradicional originario de la India. Se basa en la creencia de que la salud y el
-              bienestar dependen del equilibrio entre el cuerpo, la mente y el espíritu. Ayurveda
-              utiliza una variedad de técnicas, incluyendo la dieta, el ejercicio, la meditación y
-              los tratamientos herbales, para promover la salud y prevenir enfermedades.
-            </p>
-            <div class="flex space-x-4">
-              <div class="flex items-center">
-                <i class="mr-2 text-2xl text-green-600 fas fa-leaf"> </i>
-                <span> Natural </span>
-              </div>
-              <div class="flex items-center">
-                <i class="mr-2 text-2xl text-red-600 fas fa-heartbeat"> </i>
-                <span> Saludable </span>
-              </div>
-              <div class="flex items-center">
-                <i class="mr-2 text-2xl text-blue-600 fas fa-brain"> </i>
-                <span> Equilibrio </span>
-              </div>
-            </div>
-          </section>
           <section>
-            <h2 class="mb-4 text-2xl font-bold">Tratamientos Ayurvédicos</h2>
-            <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-              <div data-aos="zoom-out-up" class="p-4 bg-white rounded-lg shadow-md">
-                <img
-                  alt="Imagen de hierbas medicinales utilizadas en tratamientos ayurvédicos"
-                  class="object-cover w-full h-48 rounded-t-lg"
-                  height="200"
-                  src="https://storage.googleapis.com/a1aa/image/sPis2ogsy7YPA5vd2VOlkCs87KbvtQgUxcRoF5zrJdaS6Z9E.jpg"
-                  width="300"
-                />
-                <h3 class="mt-4 text-xl font-bold text-slate-700 font-poppins">
-                  Tratamiento Herbal
-                </h3>
-                <p class="mt-2 font-poppins">
-                  Uso de hierbas medicinales para tratar diversas enfermedades y mejorar la salud
-                  general. Las hierbas se seleccionan cuidadosamente según las necesidades
-                  individuales y se preparan en diversas formas, como tés, cápsulas y extractos.
-                </p>
-                <div class="flex items-center mt-4">
-                  <i class="mr-2 text-xl text-green-600 fas fa-seedling"> </i>
-                  <span> Hierbas naturales </span>
-                </div>
-                <div class="flex items-center mt-2">
-                  <i class="mr-2 text-xl text-yellow-600 fas fa-prescription-bottle-alt"> </i>
-                  <span> Sin efectos secundarios </span>
-                </div>
-              </div>
-              <div data-aos="zoom-out-up" class="p-4 bg-white rounded-lg shadow-md">
-                <img
-                  alt="Imagen de una persona recibiendo un masaje ayurvédico"
-                  class="object-cover w-full h-48 rounded-t-lg"
-                  height="200"
-                  src="https://storage.googleapis.com/a1aa/image/6FlpEUGfjCSMe0JxhojAwsvBhc9PWpA2OTkFqbKhqRYLpn1TA.jpg"
-                  width="300"
-                />
-                <h3 class="mt-4 text-xl font-bold text-slate-700 font-poppins">
-                  Masaje Ayurvédico
-                </h3>
-                <p class="mt-2 font-poppins">
-                  Masajes terapéuticos que ayudan a equilibrar el cuerpo y la mente. Utilizan
-                  aceites esenciales y técnicas específicas para aliviar el estrés, mejorar la
-                  circulación y promover la relajación profunda.
-                </p>
-                <div class="flex items-center mt-4">
-                  <i class="mr-2 text-xl text-blue-600 fas fa-hands"> </i>
-                  <span> Relajación profunda </span>
-                </div>
-                <div class="flex items-center mt-2">
-                  <i class="mr-2 text-xl text-purple-600 fas fa-spa"> </i>
-                  <span> Alivio del estrés </span>
-                </div>
-              </div>
-              <div data-aos="zoom-out-up" class="p-4 bg-white rounded-lg shadow-md">
-                <img
-                  alt="Imagen de una persona meditando en un entorno natural"
-                  class="object-cover w-full h-48 rounded-t-lg"
-                  height="200"
-                  src="https://storage.googleapis.com/a1aa/image/nouDCikbY85DE5Rudzo5Jpp4oxpWg85eTsAO7fwsP1EEpn1TA.jpg"
-                  width="300"
-                />
-                <h3 class="mt-4 text-xl font-bold text-slate-700 font-poppins">Meditación</h3>
-                <p class="mt-2 font-poppins">
-                  Prácticas de meditación para reducir el estrés y mejorar el bienestar mental. La
-                  meditación ayuda a calmar la mente, aumentar la concentración y promover un estado
-                  de paz interior.
-                </p>
-                <div class="flex items-center mt-4">
-                  <i class="mr-2 text-xl text-blue-600 fas fa-brain"> </i>
-                  <span> Claridad mental </span>
-                </div>
-                <div class="flex items-center mt-2">
-                  <i class="mr-2 text-xl text-red-600 fas fa-heart"> </i>
-                  <span> Bienestar emocional </span>
-                </div>
-              </div>
-              <div data-aos="zoom-out-up" class="p-4 bg-white rounded-lg shadow-md">
-                <img
-                  alt="Imagen de una variedad de alimentos saludables, incluyendo frutas, verduras y granos"
-                  class="object-cover w-full h-48 rounded-t-lg"
-                  height="200"
-                  src="https://storage.googleapis.com/a1aa/image/ZbdH6yb581LRARejM9ncYhfH8kMChYZJxwfwxGzok4RBVPrnA.jpg"
-                  width="300"
-                />
-                <h3 class="mt-4 text-xl font-bold text-slate-700 font-poppins">Dieta Ayurvédica</h3>
-                <p class="mt-2 font-poppins">
-                  Planes de alimentación personalizados para mantener el equilibrio y la salud. La
-                  dieta ayurvédica se basa en el uso de alimentos frescos y naturales que se adaptan
-                  a las necesidades individuales y ayudan a equilibrar los doshas.
-                </p>
-                <div class="flex items-center mt-4">
-                  <i class="mr-2 text-xl text-red-600 fas fa-apple-alt"> </i>
-                  <span> Alimentos frescos </span>
-                </div>
-                <div class="flex items-center mt-2">
-                  <i class="mr-2 text-xl text-orange-600 fas fa-carrot"> </i>
-                  <span> Nutrición balanceada </span>
-                </div>
-              </div>
-              <div data-aos="zoom-out-up" class="p-4 bg-white rounded-lg shadow-md">
-                <img
-                  alt="Imagen de una persona practicando yoga en un entorno natural"
-                  class="object-cover w-full h-48 rounded-t-lg"
-                  height="200"
-                  src="https://storage.googleapis.com/a1aa/image/M9HXVu8OX9aXMdHkUlYfjJBT8vWKpjdCabXUTo65JDah0z6JA.jpg"
-                  width="300"
-                />
-                <h3 class="mt-4 text-xl font-bold text-slate-700 font-poppins">Yoga</h3>
-                <p class="mt-2 font-poppins">
-                  Ejercicios físicos y respiratorios para fortalecer el cuerpo y la mente. El yoga
-                  combina posturas físicas, técnicas de respiración y meditación para mejorar la
-                  flexibilidad, la fuerza y el bienestar general.
-                </p>
-                <div class="flex items-center mt-4">
-                  <i class="mr-2 text-xl text-gray-600 fas fa-dumbbell"> </i>
-                  <span> Fortalecimiento físico </span>
-                </div>
-                <div class="flex items-center mt-2">
-                  <i class="mr-2 text-xl text-blue-600 fas fa-wind"> </i>
-                  <span> Mejora de la respiración </span>
-                </div>
-              </div>
-              <div data-aos="zoom-out-up" class="p-4 bg-white rounded-lg shadow-md">
-                <img
-                  alt="Imagen de una variedad de aceites esenciales"
-                  class="object-cover w-full h-48 rounded-t-lg"
-                  height="200"
-                  src="https://storage.googleapis.com/a1aa/image/d7Zn0Kabv9LIOtPGMQ9qbrzLc1sdP9BvGo4UWocys8kR6Z9E.jpg"
-                  width="300"
-                />
-                <h3 class="mt-4 text-xl font-bold text-slate-700 font-poppins">Aromaterapia</h3>
-                <p class="mt-2 font-poppins">
-                  Uso de aceites esenciales para mejorar el bienestar físico y emocional. La
-                  aromaterapia utiliza fragancias naturales para promover la relajación, aliviar el
-                  estrés y mejorar el estado de ánimo.
-                </p>
-                <div class="flex items-center mt-4">
-                  <i class="mr-2 text-xl text-yellow-600 fas fa-oil-can"> </i>
-                  <span> Aceites esenciales </span>
-                </div>
-                <div class="flex items-center mt-2">
-                  <i class="mr-2 text-xl text-green-600 fas fa-smile"> </i>
-                  <span> Bienestar emocional </span>
-                </div>
-              </div>
-              <div data-aos="zoom-out-up" class="p-4 bg-white rounded-lg shadow-md">
-                <img
-                  alt="Imagen de una persona recibiendo un tratamiento de Panchakarma"
-                  class="object-cover w-full h-48 rounded-t-lg"
-                  height="200"
-                  src="https://storage.googleapis.com/a1aa/image/4bfD85ystehekpeVsftyGDNyaaJwKemfCafCLmKmi4IVFBo1TA.jpg"
-                  width="300"
-                />
-                <h3 class="mt-4 text-xl font-bold text-slate-700 font-poppins">Panchakarma</h3>
-                <p class="mt-2 font-poppins">
-                  Un conjunto de cinco terapias que purifican y rejuvenecen el cuerpo. Panchakarma
-                  incluye tratamientos como la sudoración, la purgación y la administración de
-                  enemas para eliminar toxinas y restaurar el equilibrio.
-                </p>
-                <div class="flex items-center mt-4">
-                  <i class="mr-2 text-xl text-blue-600 fas fa-water"> </i>
-                  <span> Desintoxicación </span>
-                </div>
-                <div class="flex items-center mt-2">
-                  <i class="mr-2 text-xl text-green-600 fas fa-sync-alt"> </i>
-                  <span> Rejuvenecimiento </span>
-                </div>
-              </div>
-              <div data-aos="zoom-out-up" class="p-4 bg-white rounded-lg shadow-md">
-                <img
-                  alt="Imagen de una persona recibiendo un tratamiento de Shirodhara"
-                  class="object-cover w-full h-48 rounded-t-lg"
-                  height="200"
-                  src="https://storage.googleapis.com/a1aa/image/V5Hl0UVRvLKPNpFpJCIHkkDItsarmS5ylIfS5DtVYeru9n1TA.jpg"
-                  width="300"
-                />
-                <h3 class="mt-4 text-xl font-bold text-slate-700 font-poppins">Shirodhara</h3>
-                <p class="mt-2 font-poppins">
-                  Un tratamiento en el que se vierte aceite tibio en la frente para calmar la mente
-                  y el sistema nervioso. Shirodhara es conocido por sus efectos relajantes y su
-                  capacidad para mejorar la calidad del sueño.
-                </p>
-                <div class="flex items-center mt-4">
-                  <i class="mr-2 text-xl text-yellow-600 fas fa-oil-can"> </i>
-                  <span> Aceite tibio </span>
-                </div>
-                <div class="flex items-center mt-2">
-                  <i class="mr-2 text-xl text-blue-600 fas fa-bed"> </i>
-                  <span> Mejora del sueño </span>
-                </div>
-              </div>
-              <div data-aos="zoom-out-up" class="p-4 bg-white rounded-lg shadow-md">
-                <img
-                  alt="Imagen de una persona recibiendo un tratamiento de Abhyanga"
-                  class="object-cover w-full h-48 rounded-t-lg"
-                  height="200"
-                  src="https://storage.googleapis.com/a1aa/image/BKYykEjNudY7EBXCggATyLWT8ArWG0tCAWfxCweNzi2NGo1TA.jpg"
-                  width="300"
-                />
-                <h3 class="mt-4 text-xl font-bold text-slate-700 font-poppins">Abhyanga</h3>
-                <p class="mt-2 font-poppins">
-                  Un masaje ayurvédico con aceite que se aplica en todo el cuerpo. Abhyanga ayuda a
-                  mejorar la circulación, eliminar toxinas y promover la relajación y el bienestar
-                  general.
-                </p>
-                <div class="flex items-center mt-4">
-                  <i class="mr-2 text-xl text-blue-600 fas fa-hands"> </i>
-                  <span> Masaje con aceite </span>
-                </div>
-                <div class="flex items-center mt-2">
-                  <i class="mr-2 text-xl text-purple-600 fas fa-spa"> </i>
-                  <span> Relajación profunda </span>
-                </div>
-              </div>
-              <div data-aos="zoom-out-up" class="p-4 bg-white rounded-lg shadow-md">
-                <img
-                  alt="Imagen de una persona recibiendo un tratamiento de Nasya"
-                  class="object-cover w-full h-48 rounded-t-lg"
-                  height="200"
-                  src="https://storage.googleapis.com/a1aa/image/iY0nAQRDedQWBa3dzfAXgWf0yrTAfxxD61U1s2OafKk56AteE.jpg"
-                  width="300"
-                />
-                <h3 class="mt-4 text-xl font-bold text-slate-700 font-poppins">Nasya</h3>
-                <p class="mt-2 font-poppins">
-                  Un tratamiento que implica la administración de aceites medicinales a través de
-                  las fosas nasales. Nasya ayuda a limpiar y purificar los senos paranasales,
-                  mejorar la respiración y aliviar problemas respiratorios.
-                </p>
-                <div class="flex items-center mt-4">
-                  <i class="mr-2 text-xl text-blue-600 fas fa-wind"> </i>
-                  <span> Mejora de la respiración </span>
-                </div>
-                <div class="flex items-center mt-2">
-                  <i class="mr-2 text-xl text-green-600 fas fa-lungs"> </i>
-                  <span> Alivio de problemas respiratorios </span>
-                </div>
-              </div>
-              <div data-aos="zoom-out-up" class="p-4 bg-white rounded-lg shadow-md">
-                <img
-                  alt="Imagen de una persona recibiendo un tratamiento de Basti"
-                  class="object-cover w-full h-48 rounded-t-lg"
-                  height="200"
-                  src="https://storage.googleapis.com/a1aa/image/77FtRieU8FSOQqf922JMenoJPYQaQe6PVHSBS88gcaC0fAteE.jpg"
-                  width="300"
-                />
-                <h3 class="mt-4 text-xl font-bold text-slate-700 font-poppins">Basti</h3>
-                <p class="mt-2 font-poppins">
-                  Un tratamiento que implica la administración de enemas medicinales para limpiar y
-                  desintoxicar el colon. Basti es eficaz para tratar problemas digestivos y mejorar
-                  la salud intestinal.
-                </p>
-                <div class="flex items-center mt-4">
-                  <i class="mr-2 text-xl text-gray-600 fas fa-toilet"> </i>
-                  <span> Limpieza del colon </span>
-                </div>
-                <div class="flex items-center mt-2">
-                  <i class="mr-2 text-xl text-green-600 fas fa-leaf"> </i>
-                  <span> Desintoxicación natural </span>
-                </div>
-              </div>
-              <div data-aos="zoom-out-up" class="p-4 bg-white rounded-lg shadow-md">
-                <img
-                  alt="Imagen de una persona recibiendo un tratamiento de Basti"
-                  class="object-cover w-full h-48 rounded-t-lg"
-                  height="200"
-                  src="https://files.oaiusercontent.com/file-4wDZNkvaAs84nh8NjqfnKE?se=2024-11-29T06%3A23%3A35Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Db116bfe9-cb33-4b40-9813-619fe8e30731.webp&sig=50NHL/D9Z5jXSwFpZ6T9YLnCaXJ9IPN9jDrnWnzEb4U%3D"
-                  width="300"
-                />
-                <h3 class="mt-4 text-xl font-bold text-slate-700 font-poppins">
-                  Tratamiento Ayurvédico
-                </h3>
-                <p class="mt-2 font-poppins">
-                  Este proceso forma parte de un enfoque holístico para equilibrar la mente y el
-                  cuerpo, promoviendo la relajación, la desintoxicación y la sanación. La sesión se
-                  lleva a cabo en un entorno tranquilo y sereno, rodeado de elementos naturales como
-                  velas, plantas y luz suave, creando una atmósfera pacífica y restauradora para el
-                  bienestar general.
-                </p>
-                <div class="flex items-center mt-4">
-                  <i class="mr-2 text-xl text-rose-600 fas fa-heart"> </i>
-                  <span> Limpieza del colon </span>
-                </div>
-                <div class="flex items-center mt-2">
-                  <i class="mr-2 text-xl text-green-600 fas fa-fire"> </i>
-                  <span> Desintoxicación natural </span>
-                </div>
-              </div>
-            </div>
+            <h2 class="px-3 text-left font-poppins max-w-[80%]">Esta página está diseñada para ayudarle a que se informe sobre las asesoras del hogar, si usted tiene recomendaciones puede comentar en nuestra seccion de <RouterLink :to="{name:'home'}" class="font-semibold underline uppercase text-sky-800">comentarios</RouterLink>, el uso de esta página es libre, seguro y gratuito</h2>
+        <!-- Slider Cards -->
+         <div id="opiniones" class="pt-10" >
+           <SliderCards/>
+         </div>
+
+           <!-- <section class="py-12">
+   <div class="container px-4 mx-auto">
+    <h2 class="mb-8 text-3xl font-bold text-center">
+     La Importancia de las Asesoras del Hogar
+    </h2>
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+     <div class="p-6 bg-white rounded-lg shadow-lg">
+      <img alt="Asesora del hogar limpiando una mesa con dedicación" class="object-cover w-full h-48 rounded-t-lg" height="400" src="https://storage.googleapis.com/a1aa/image/vLgIcNEA2Ea3B1GYSMFKumgJ1PfZjWKPgoYw3selN9uQZ65TA.jpg" width="600"/>
+      <h3 class="mt-4 text-xl font-semibold">
+       Limpieza y Orden
+      </h3>
+      <p class="mt-2 text-gray-600">
+       Las asesoras del hogar mantienen nuestros espacios limpios y ordenados, lo que contribuye a un ambiente saludable y agradable. Su dedicación y atención al detalle aseguran que cada rincón de la casa esté impecable, creando un entorno acogedor y libre de estrés.
+      </p>
+     </div>
+     <div class="p-6 bg-white rounded-lg shadow-lg">
+      <img alt="Asesora del hogar cocinando una comida saludable" class="object-cover w-full h-48 rounded-t-lg" height="400" src="https://storage.googleapis.com/a1aa/image/A4nMJhMbtuLFItiiG7hbjyAMgmEuIl6B6fsgb0mxfo0TZ65TA.jpg" width="600"/>
+      <h3 class="mt-4 text-xl font-semibold">
+       Preparación de Alimentos
+      </h3>
+      <p class="mt-2 text-gray-600">
+       Ellas preparan comidas nutritivas y deliciosas, asegurando que nuestras familias se alimenten bien. Con su habilidad culinaria, pueden adaptar los menús a las necesidades y preferencias de cada miembro de la familia, promoviendo una dieta balanceada y saludable.
+      </p>
+     </div>
+     <div class="p-6 bg-white rounded-lg shadow-lg">
+      <img alt="Asesora del hogar cuidando a un niño pequeño con cariño" class="object-cover w-full h-48 rounded-t-lg" height="400" src="https://storage.googleapis.com/a1aa/image/WdemcMnfq2nYt0LdKHVPLVSf520M4tDKYn6iUwEkvx2py0znA.jpg" width="600"/>
+      <h3 class="mt-4 text-xl font-semibold">
+       Cuidado de Niños
+      </h3>
+      <p class="mt-2 text-gray-600">
+       Las asesoras del hogar también cuidan de nuestros hijos, brindándoles atención y cariño mientras estamos ocupados. Su presencia no solo garantiza la seguridad de los niños, sino que también les proporciona un ambiente afectuoso y estimulante para su desarrollo.
+      </p>
+     </div>
+     <div class="p-6 bg-white rounded-lg shadow-lg">
+      <img alt="Asesora del hogar planchando ropa con esmero" class="object-cover w-full h-48 rounded-t-lg" height="400" src="https://storage.googleapis.com/a1aa/image/lNYEf4uIjV2uB6o4DEmU1xPef0ccCXsUGgjeIsr0J6WXlpnPB.jpg" width="600"/>
+      <h3 class="mt-4 text-xl font-semibold">
+       Cuidado de la Ropa
+      </h3>
+      <p class="mt-2 text-gray-600">
+       Se encargan de lavar y planchar la ropa, manteniéndola en perfectas condiciones para su uso diario. Gracias a su esmero, nuestras prendas siempre están listas y presentables, lo que nos permite lucir bien en cualquier ocasión.
+      </p>
+     </div>
+     <div class="p-6 bg-white rounded-lg shadow-lg">
+      <img alt="Asesora del hogar organizando una despensa con eficiencia" class="object-cover w-full h-48 rounded-t-lg" height="400" src="https://storage.googleapis.com/a1aa/image/ZeFjwww1Sh2sLqYTv1w0kxNf6se6sLicfW8KW494eWm9JTPfE.jpg" width="600"/>
+      <h3 class="mt-4 text-xl font-semibold">
+       Organización del Hogar
+      </h3>
+      <p class="mt-2 text-gray-600">
+       Ayudan a organizar y mantener el hogar en orden, facilitando la vida diaria de todos los miembros de la familia. Su habilidad para gestionar el espacio y los recursos del hogar asegura que todo esté en su lugar, lo que mejora la eficiencia y reduce el desorden.
+      </p>
+     </div>
+     <div class="p-6 bg-white rounded-lg shadow-lg">
+      <img alt="Asesora del hogar asistiendo a una persona mayor con amabilidad" class="object-cover w-full h-48 rounded-t-lg" height="400" src="https://storage.googleapis.com/a1aa/image/rk3ueakVapWUaiAufEIC2mwd9h43LbEkVdGDyWYqxezdy0znA.jpg" width="600"/>
+      <h3 class="mt-4 text-xl font-semibold">
+       Asistencia a Personas Mayores
+      </h3>
+      <p class="mt-2 text-gray-600">
+       Proveen asistencia y compañía a las personas mayores, mejorando su calidad de vida y bienestar. Su apoyo no solo incluye ayuda con las tareas diarias, sino también una presencia reconfortante que combate la soledad y promueve la felicidad.
+      </p>
+     </div>
+    </div>
+   </div>
+  </section> -->
+
+
+
           </section>
-        </section>
 
-        <section
-          class="flex flex-col items-center justify-center w-full min-h-screen bg-white font-poppins"
-        >
-          <div class="w-full mb-8 text-center">
-            <h2 class="px-5 py-5 text-2xl font-bold text-white bg-orange-700">
-              Cómo la Medicina Ayurvédica Puede Ayudar con el Dolor Muscular y Articular
-            </h2>
-          </div>
-          <div class="w-full max-w-4xl">
-            <iframe
-              class="w-full h-96"
-              src="https://www.youtube.com/embed/lFayag6SS6k?si=2BMfyyLajJB4lBVi"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
-          </div>
-          <div class="mt-8 text-center">
-            <ul class="text-left list-none list-inside">
-              <li class="mb-2">
-                <i class="text-orange-500 fas fa-video"></i> En este video se explica cómo la
-                medicina ayurvédica puede ayudar con el dolor muscular y articular.
-              </li>
-              <li class="mb-2">
-                <i class="text-green-500 fas fa-leaf"></i> Se detallan los principios básicos de la
-                medicina ayurvédica.
-              </li>
-              <li class="mb-2">
-                <i class="text-purple-500 fas fa-spa"></i> Se presentan remedios naturales y
-                técnicas de tratamiento.
-              </li>
-              <li class="mb-2">
-                <i class="text-red-500 fas fa-utensils"></i> Se discuten los beneficios de la dieta
-                y el estilo de vida ayurvédico.
-              </li>
-              <li class="mb-2">
-                <i class="text-yellow-500 fas fa-lightbulb"></i> Se ofrecen consejos prácticos para
-                incorporar la medicina ayurvédica en la vida diaria.
-              </li>
-            </ul>
-          </div>
-        </section>
-
-        <section class="w-full mt-5 font-poppins">
-          <h1 class="w-full py-5 mb-6 text-4xl font-bold text-center text-white bg-orange-800">
-            Noticias
-          </h1>
-          <div class="grid grid-cols-1 gap-6 px-2 md:grid-cols-2 lg:grid-cols-3">
-            <div class="overflow-hidden bg-white rounded-lg shadow-md border-animated">
-              <img
-                alt="Imagen de Noticia 1: Una vista panorámica de una ciudad moderna con rascacielos y un cielo despejado"
-                class="object-cover w-full h-48"
-                height="400"
-                src="https://www.clinicbarcelona.org/media/cache/1536_webp/uploads/media/default/0002/64/f2d39b1839ee3a78a6b036ce131f90622b0988e0.webp"
-                width="600"
-              />
-              <div class="p-4">
-                <h2 class="mb-2 text-xl font-bold">
-                  Identifican una estrategia preventiva que podría frenar el inicio de la artritis
-                </h2>
-                <p class="mb-4 text-gray-700">
-                  Un estudio en el que han participado investigadores del Hospital Clínic-IDIBAPS
-                  demuestra que la artritis reumatoide puede tener su origen en el intestino, tras
-                  una alteración de la barrera intestinal.
-                </p>
-                <a
-                  class="text-orange-500 hover:underline"
-                  href="https://www.clinicbarcelona.org/noticias/descubren-un-tipo-de-fibroblasto-clave-en-la-resolucion-de-la-inflamacion-articular-en-artritis-reumatoide-y-artritis-psoriasica"
-                  target="_blank"
-                >
-                  Ver más
-                </a>
+          <section class="flex w-full ">
+            <!-- section info -->
+            <article class="w-3/4 min-h-dvh md:font-poppins">
+              <h2 class="text-center text-white">Left Section</h2>
+              <div class="overflow-y-scroll h-dvh">
+                <section class="mb-8 px-9 md:px-3 ">
+    <h2 class="mb-4 text-2xl font-bold uppercase font-josefin-sans text-slate-800">
+     Introducción
+    </h2>
+    <p class="mb-4 ">
+     Las asesoras del hogar han jugado un papel crucial en la vida cotidiana de muchas familias a lo largo de la historia. Su trabajo no solo facilita la vida diaria, sino que también contribuye significativamente al bienestar y la organización del hogar. Desde la limpieza y el mantenimiento hasta la preparación de comidas y el cuidado de los niños, las asesoras del hogar son esenciales para el funcionamiento armonioso de una casa.
+    </p>
+    <img alt="Una asesora del hogar realizando tareas domésticas, como limpiar o cocinar, en una casa bien organizada" class="w-full h-auto rounded-lg shadow-md md:w-3/4" height="400" src="https://storage.googleapis.com/a1aa/image/GlJKechoZnVxG6Guoqr6k8AWowkoODX7CLmgCNK5Efu6u65TA.jpg" width="600"/>
+   </section>
+   <section class="mb-8">
+    <h2 class="mb-4 text-2xl font-bold uppercase font-josefin-sans text-slate-800">
+     Historia de las Asesoras del Hogar
+    </h2>
+    <p class="mb-4">
+     Desde tiempos antiguos, las asesoras del hogar han sido una parte integral de la estructura familiar. En muchas culturas, su rol ha evolucionado desde ser ayudantes en tareas básicas hasta convertirse en administradoras del hogar. En la antigüedad, las familias adineradas solían emplear a varias personas para diferentes tareas domésticas, mientras que en las familias más humildes, una sola persona podía encargarse de múltiples responsabilidades. Con el tiempo, la figura de la asesora del hogar ha ido ganando reconocimiento y respeto, aunque aún queda mucho por hacer para asegurar condiciones laborales justas y dignas.
+    </p>
+    <img alt="Representación histórica de una asesora del hogar en una casa antigua, realizando tareas domésticas" class="w-full h-auto rounded-lg shadow-md md:w-3/4" height="400" src="https://storage.googleapis.com/a1aa/image/ZqCFRCNpcJ4qF1Ts299haUu8qEHeo6HajyMIjojjw8ubX98JA.jpg" width="600"/>
+   </section>
+   <section class="mb-8">
+    <h2 class="mb-4 text-2xl font-bold uppercase font-josefin-sans text-slate-800">
+     El Rol en la Sociedad Moderna
+    </h2>
+    <p class="mb-4">
+     En la sociedad moderna, las asesoras del hogar no solo se encargan de las tareas domésticas, sino que también pueden desempeñar roles de cuidado infantil, apoyo emocional y gestión del hogar. Su trabajo permite que muchas familias puedan equilibrar sus vidas profesionales y personales. Además, en muchos casos, las asesoras del hogar se convierten en miembros de la familia, estableciendo lazos afectivos y de confianza. Su capacidad para manejar múltiples tareas y adaptarse a las necesidades cambiantes del hogar las convierte en una parte invaluable de la vida moderna.
+    </p>
+    <img alt="Una asesora del hogar moderna interactuando con una familia, ayudando con las tareas del hogar y el cuidado de los niños" class="w-full h-auto rounded-lg shadow-md md:w-3/4" height="400" src="https://storage.googleapis.com/a1aa/image/MoBP9ai3LJLHLVH4ReYyEzkseyCf67PZozsfR3tvTW0s7qnPB.jpg" width="600"/>
+   </section>
+   <section class="mb-8">
+    <h2 class="mb-4 text-2xl font-bold uppercase font-josefin-sans text-slate-800">
+     Desafíos y Reconocimientos
+    </h2>
+    <p class="mb-4">
+     A pesar de su importancia, las asesoras del hogar a menudo enfrentan desafíos como la falta de reconocimiento y condiciones laborales injustas. Es crucial reconocer su trabajo y asegurar que reciban el respeto y los derechos que merecen. Muchas asesoras del hogar trabajan largas horas con poca remuneración y sin beneficios laborales adecuados. La lucha por mejorar sus condiciones de trabajo es una tarea continua que requiere el apoyo de la sociedad en general. Reconocer y valorar su contribución es un paso fundamental hacia la justicia y la equidad.
+    </p>
+    <img alt="Una asesora del hogar recibiendo reconocimiento por su trabajo, con una familia agradecida en el fondo" class="w-full h-auto rounded-lg shadow-md md:w-3/4" height="400" src="https://storage.googleapis.com/a1aa/image/seGZVYvQrARxOKbn8oGt9jfzFxKbyTfDawDeMekvaYOz2VPfE.jpg" width="600"/>
+   </section>
+   <section class="mb-8">
+    <h2 class="mb-4 text-2xl font-bold uppercase font-josefin-sans text-slate-800">
+     Conclusión
+    </h2>
+    <p class="mb-4">
+     Las asesoras del hogar son fundamentales para el funcionamiento de muchos hogares. Su dedicación y esfuerzo diario merecen ser valorados y respetados. Es importante continuar trabajando hacia un futuro donde su labor sea reconocida y apreciada en toda su magnitud. La sociedad debe esforzarse por crear un entorno en el que las asesoras del hogar puedan trabajar en condiciones justas y dignas, con acceso a beneficios laborales y oportunidades de desarrollo personal y profesional. Solo así podremos asegurar que su invaluable contribución sea plenamente reconocida y apreciada.
+    </p>
+    <img alt="Una asesora del hogar sonriendo, simbolizando la importancia y el reconocimiento de su trabajo" class="w-full h-auto rounded-lg shadow-md" height="400" src="https://storage.googleapis.com/a1aa/image/4w990B4sh8KIH9jzOBMNbfMnIng8Pq1qoNFNDhICBTgcX98JA.jpg" width="600"/>
+   </section>
               </div>
-            </div>
-            <div class="overflow-hidden bg-white rounded-lg shadow-md border-animated">
-              <img
-                alt="Imagen de Noticia 2: Un grupo de personas en una conferencia, con un orador en el escenario"
-                class="object-cover w-full h-48"
-                height="400"
-                src="https://www.pmfarma.com/noticias/noticias/48227/image/artri.jpg"
-                width="600"
-              />
-              <div class="p-4">
-                <h2 class="mb-2 text-xl font-bold">
-                  La artritis reumatoide afecta al 75% de mujeres mexicanas en edad productiva
-                </h2>
-                <p class="mb-4 text-gray-700">
-                  En Latinoamérica, existen alrededor de 34 millones de pacientes afectados con
-                  discapacidad permanente
-                </p>
-                <a
-                  class="text-orange-500 hover:underline"
-                  href="https://www.pmfarma.com/app/noticias/48227-la-artritis-reumatoide-afecta-al-75-de-mujeres-mexicanas-en-edad-productiva"
-                  target="_blank"
-                >
-                  Ver más
-                </a>
-              </div>
-            </div>
-            <div class="overflow-hidden bg-white rounded-lg shadow-md border-animated">
-              <img
-                alt="Imagen de Noticia 3: Un paisaje natural con montañas y un lago en el fondo"
-                class="object-cover w-full h-48"
-                height="400"
-                src="https://blob.udgtv.com/images/2024/10/14/artritis-pexels-focus-0-0-696-464.jpg"
-                width="600"
-              />
-              <div class="p-4">
-                <h2 class="mb-2 text-xl font-bold">
-                  Artritis Reumatoide, enfermedad que ataca no sólo a adultos mayores, sino a
-                  jóvenes
-                </h2>
-                <p class="mb-4 text-gray-700">
-                  La Artritis Reumatoide es una de las enfermedades autoinmunes más prevalente en la
-                  población mexicana, se estima que uno por ciento de los adultos son diagnosticados
-                  con esta enfermedad.
-                </p>
-                <a
-                  class="text-orange-500 hover:underline"
-                  href="https://udgtv.com/noticias/artritis-reumatoide-enfermedad-que-ataca/243537"
-                  target="_blank"
-                >
-                  Ver más
-                </a>
-              </div>
-            </div>
-            <div class="overflow-hidden bg-white rounded-lg shadow-md border-animated">
-              <img
-                alt="Imagen de Noticia 4: Un equipo de científicos trabajando en un laboratorio"
-                class="object-cover w-full h-48"
-                height="400"
-                src="https://www.infobae.com/resizer/v2/X3ROBORC6ZCBHDLU5SJCT6PZSY.jpg?auth=e03c6f2193c8ab3ea2593bd075f4aa5a66709bca797c0f227d3f73e7960f5759&smart=true&width=992&height=606&quality=85"
-                width="600"
-              />
-              <div class="p-4">
-                <h2 class="mb-2 text-xl font-bold">Qué hacer en caso de dolor muscular</h2>
-                <p class="mb-4 text-gray-700">
-                  El cuerpo avisa, lo hace cuando está bien o cuando se encuentra mal y es a través
-                  de los primeros signos que prende las alertas sobre algún padecimiento. Por eso es
-                  importante aprender a oirlo y a la primera llamada de atención visitar al doctor.
-                </p>
-                <a
-                  class="text-orange-500 hover:underline"
-                  href="https://www.infobae.com/noticias/2024/03/04/que-hacer-en-caso-de-dolor-muscular/"
-                  target="_blank"
-                >
-                  Ver más
-                </a>
-              </div>
-            </div>
-            <div class="overflow-hidden bg-white rounded-lg shadow-md border-animated">
-              <img
-                alt="Imagen de Noticia 5: Un evento deportivo con jugadores en acción en un campo de fútbol"
-                class="object-cover w-full h-48"
-                height="400"
-                src="https://www.lanacion.com.ar/resizer/v2/se-trata-de-un-aliado-natural-para-prevenir-BCIKSXJZ7JEN5MYKVUJ2ASFUSY.jpg?auth=01aa5b247897e45380cfb3a73620d50f1073ea410b86133cafceb39657dc5743&width=880&height=586&quality=70&smart=true"
-                width="600"
-              />
-              <div class="p-4">
-                <h2 class="mb-2 text-xl font-bold">
-                  La planta que tiene mala fama pero que cura el dolor muscular y aumenta el
-                  colágeno
-                </h2>
-                <p class="mb-4 text-gray-700">
-                  Desde propiedades antiinflamatorias hasta ayudar a prevenir ciertas afecciones, es
-                  considerada un aliado natural; sus propiedades y cómo consumirla
-                </p>
-                <a
-                  class="text-orange-500 hover:underline"
-                  href="https://www.lanacion.com.ar/lifestyle/cuidado-cuerpo-belleza/la-planta-que-tiene-mala-fama-pero-que-cura-el-dolor-muscular-y-aumenta-el-colageno-nid28112024/"
-                  target="_blank"
-                >
-                  Ver más
-                </a>
-              </div>
-            </div>
-            <div class="overflow-hidden bg-white rounded-lg shadow-md border-animated">
-              <img
-                alt="Imagen de Noticia 6: Una reunión de negocios con personas discutiendo alrededor de una mesa"
-                class="object-cover w-full h-48"
-                height="400"
-                src="https://www.infobae.com/resizer/v2/UD2EFBVGY5HKTB2PK4SJXDL3K4.jpg?auth=8a5430c05e41aea8c4f91ad341525d7b51e9a9fd82cd4867229d2a7481d668de&smart=true&width=992&height=558&quality=85"
-                width="600"
-              />
-              <div class="p-4">
-                <h2 class="mb-2 text-xl font-bold">
-                  Dolor muscular: estrategias de autocuidado basadas en la ciencia para un alivio
-                  eficaz
-                </h2>
-                <p class="mb-4 text-gray-700">
-                  El dolor muscular es una afección común que puede aliviarse con un autocuidado
-                  informado. Cómo entender el origen del dolor y elegir analgésicos adecuados para
-                  un manejo seguro y efectivo
-                </p>
-                <a
-                  class="text-orange-500 hover:underline"
-                  href="https://www.infobae.com/inhouse/2024/07/01/dolor-muscular-estrategias-de-autocuidado-basadas-en-la-ciencia-para-un-alivio-eficaz/"
-                  target="_blank"
-                >
-                  Ver más
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="p-6 font-poppins">
-          <div class="p-6 bg-white rounded-lg shadow-lg">
-            <h2 class="mb-4 text-2xl font-bold text-emerald-800">Seguridad de la Página</h2>
-            <p class="mb-4 text-gray-700">
-              Nos tomamos muy en serio la seguridad de tu información. Aquí hay algunas medidas que
-              hemos implementado para asegurar que tu experiencia sea segura:
-            </p>
-
-            <!-- Conexión Segura -->
-            <div class="flex items-center mb-6">
-              <i class="mr-4 text-3xl text-green-500 fas fa-lock"></i>
-              <div>
-                <h3 class="text-xl font-semibold">Conexión Segura</h3>
-                <p class="text-gray-600">
-                  Utilizamos HTTPS para asegurar que tu conexión a nuestra página esté encriptada y
-                  segura. Esto significa que cualquier dato que envíes o recibas a través de nuestra
-                  página está protegido contra interceptaciones.
-                </p>
-                <ul class="text-gray-600 list-disc list-inside">
-                  <li>Protección contra ataques de intermediarios (Man-in-the-Middle).</li>
-                  <li>Encriptación de datos.</li>
-                  <li>Verificación de la autenticidad del servidor.</li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Certificado SSL -->
-            <div class="flex items-center">
-              <i class="mr-4 text-3xl text-blue-500 fas fa-shield-alt"></i>
-              <div>
-                <h3 class="text-xl font-semibold">Certificado SSL</h3>
-                <p class="text-gray-600">
-                  Nuestro sitio está protegido con un certificado SSL, lo que garantiza que tus
-                  datos están seguros y encriptados. Un certificado SSL es una tecnología estándar
-                  de seguridad que establece un enlace encriptado entre un servidor web y un
-                  navegador.
-                </p>
-                <ul class="text-gray-600 list-disc list-inside">
-                  <li>
-                    Autenticación del sitio web para asegurar que estás comunicándote con el
-                    servidor correcto.
-                  </li>
-                  <li>
-                    Encriptación de la información transmitida para protegerla de accesos no
-                    autorizados.
-                  </li>
-                  <li>
-                    Confianza y seguridad para nuestros usuarios al ver el candado en la barra de
-                    direcciones.
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- Ads Section -->
-        <h3 class="mt-6 text-2xl font-bold text-center text-rose-900 font-poppins">
-          Le puede interesar
-        </h3>
-        <section class="flex justify-center w-full my-6 space-x-4">
-          <!-- ads section -->
-          <div
-            class="relative flex items-center justify-center w-1/2 p-4 border-2 rounded-lg shadow-md border-slate-400 bg-slate-100"
-          >
-            <span
-              class="absolute px-2 py-1 text-sm font-semibold text-white rounded -top-4 left-4 bg-slate-500"
-              >Anuncio</span
-            >
-            <a
-              href="https://shykandev.github.io/medicinaparahigado/"
-              class="relative w-full h-full"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div
-                class="absolute flex flex-col items-center w-full h-full transition-opacity duration-300 ease-out bg-black opacity-0 hover:opacity-70 justify-evenly"
-              >
-                <p class="text-xs font-bold text-center text-white font-poppins md:text-3xl">
-                  Jarabe o Cápsulas tu decides
-                </p>
-                <p class="text-sm font-bold text-center text-white font-poppins md:text-3xl">
-                  100% Natural
-                </p>
-              </div>
-              <img
-                class="w-full h-full bg-contain rounded-md"
-                src="https://shykandev.github.io/medicinaparahigado/assets/mainHome-BjxRmTRc.jpg"
-                alt=""
-              />
-              <p
-                class="absolute text-xs font-bold text-center text-white bg-red-600 top-1 font-poppins md:text-3xl"
-              >
-                ¿Problemas en el Hígado?
-              </p>
-              <p
-                class="absolute text-xs font-bold text-center text-white bottom-1 font-poppins md:text-3xl"
-              >
-                Conozca Livad
-              </p>
-            </a>
-          </div>
-
-          <div
-            class="relative flex items-center justify-center w-1/2 p-4 border-2 rounded-lg shadow-md border-slate-400 bg-slate-100"
-          >
-            <span
-              class="absolute px-2 py-1 text-sm font-semibold text-white rounded -top-4 left-4 bg-slate-500"
-              >Anuncio</span
-            >
-            <a
-              href="https://shykandev.github.io/medicinaparadiabetes/"
-              class="relative w-full h-full"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div
-                class="absolute flex flex-col items-center w-full h-full transition-opacity duration-300 ease-out bg-black opacity-0 hover:opacity-70 justify-evenly"
-              >
-                <p class="text-sm font-bold text-center text-white font-poppins md:text-3xl">
-                  100% Natural
-                </p>
-                <!-- <p class="text-sm font-bold text-center text-white font-poppins md:text-3xl">Tu </p> -->
-                <p
-                  class="hidden text-sm font-bold text-center text-white font-poppins md:text-3xl md:block"
-                >
-                  Esta es su solución
-                </p>
-              </div>
-              <img
-                class="w-full h-full bg-contain rounded-md"
-                src="https://shykandev.github.io/medicinaparadiabetes/assets/mainHome-EGZr2Qar.jpg"
-                alt=""
-              />
-              <p
-                class="absolute top-0 text-xs font-bold text-center text-white bg-yellow-600 font-poppins md:text-3xl"
-              >
-                ¿Tienes Diabetes?
-              </p>
-              <p
-                class="absolute px-3 text-xs font-bold text-center text-white md:px-0 bottom-3 font-poppins md:text-3xl"
-              >
-                Le recomendamos GLUFAC
-              </p>
-            </a>
-          </div>
-        </section>
-      </template>
-    </MainLayout>
+            </article>
+            <!-- section ads -->
+            <aside class="flex flex-col items-center w-1/4 gap-3 min-h-dvh">
+  <h2 class="text-2xl text-white">Right Section</h2>
+  <!-- ads cards -->
+  <div class="relative w-3/4 bg-black min-h-56 rounded-xl">
+    <img src="https://images.pexels.com/photos/753331/pexels-photo-753331.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="absolute top-0 left-0 object-cover w-full h-full">
+    <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50 rounded-xl"></div> <!-- Overlay -->
+    <h2 class="relative z-10 text-2xl text-center text-white">negocioamerica.com</h2>
+    <h3 class="relative z-10 mt-4 text-center text-white lg:text-lg">¿Desea importar productos de México hacia su país? Somos su mejor opción</h3>
   </div>
+  <div class="relative w-3/4 bg-white min-h-56 rounded-xl">
+    <img src="https://images.pexels.com/photos/18262410/pexels-photo-18262410/free-photo-of-man-kissing-bride-in-cheek.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="absolute top-0 left-0 object-cover w-full h-full">
+    <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50 rounded-xl"></div> <!-- Overlay -->
+    <h2 class="relative z-10 text-2xl text-center text-white">miexnovio.com</h2>
+    <h3 class="relative z-10 mt-4 text-center text-white lg:text-lg">¿Mala experiencia con una exnovia?</h3>
+    <h3 class="relative z-10 mt-4 text-center text-white lg:text-lg">Comparta sus experiencias con nuestros usuarios</h3>
+  </div>
+  <div class="relative w-3/4 bg-white min-h-56 rounded-xl">
+    <img src="https://images.pexels.com/photos/8292879/pexels-photo-8292879.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="absolute top-0 left-0 object-cover w-full h-full">
+    <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50 rounded-xl"></div> <!-- Overlay -->
+    <h2 class="relative z-10 text-2xl text-center text-white">miarrendatario.com</h2>
+    <h3 class="relative z-10 text-center text-white lg:text-lg">¿Necesita ayuda para encontrar un arrendatario?</h3>
+    <h3 class="relative z-10 text-center text-white lg:text-lg">Visitenos y descubra lo que necesita</h3>
+  </div>
+</aside>
+
+
+            </section>
+
+            <!-- histories summary -->
+            <section class="p-6 bg-gray-100 rounded-lg shadow-md comments-section">
+    <h2 class="mb-4 text-xl font-bold">Comentarios y Experiencias</h2>
+
+    <!-- Lista de Comentarios -->
+    <ExampleComment
+      v-for="comment in comments"
+      :key="comment.id"
+      :image="comment.image"
+      :name="comment.name"
+      :date="comment.date"
+      :summary="comment.summary"
+    />
+
+    <!-- Botón para agregar nuevo comentario -->
+    <router-link
+      to="/create-comment"
+      class="block px-4 py-2 mt-4 text-center text-white bg-blue-600 rounded-lg shadow hover:bg-blue-700"
+    >
+      Crear Comentario <i class="fas fa-comment-alt"></i>
+    </router-link>
+    <router-link
+      to="/create-comment"
+      class="block px-4 py-2 mt-4 text-center text-white rounded-lg shadow bg-sky-600 hover:bg-blue-700"
+    >
+      Leer más experiencias <i class="fas fa-angle-double-right"></i>
+    </router-link>
+  </section>
+
+        </template>
+      </MainLayout>
+    </div>
 </template>
 
 <script lang="ts" setup>
+import ExampleComment from '@/components/comments/ExampleComment.vue';
+import SliderCards from '@/components/home/SliderCards.vue';
 import MainLayout from '@/layouts/MainLayout.vue'
-import InfoCardMain from '@/components/InfoCardMain.vue'
-import IntroCard from '@/components/IntroCard.vue'
+import { onMounted, ref } from 'vue';
+
+const comments = [
+  {
+    id: 1,
+    image: "https://i.ibb.co/pJW1WwQ/Mar-a.jpg",
+    name: "María López",
+    date: "2024-12-11",
+    summary: "Mi nombre es María López y quiero compartir una experiencia muy especial que viví gracias a Clara Martínez, una ama de hogar que trabajó para mi familia durante más de tres años. Clara llegó a nuestra casa cuando yo estaba pasando por un momento muy complicado. Tenía dos hijos pequeños, un trabajo a tiempo completo y, como muchas madres, estaba agotada tratando de equilibrar todo. Desde el primer día, Clara se mostró increíblemente dedicada, amable y con una actitud muy profesional. Siempre llegaba a tiempo, hacía su trabajo con esmero y no solo se encargaba de las tareas domésticas, sino que se preocupaba por mi familia, como si fuera parte de ella. Un día, después de que Clara terminara su jornada y se fuera, nos dimos cuenta de que faltaba algo muy importante: una pequeña caja con dinero que habíamos dejado en la mesa de la sala. Era una cantidad significativa, no mucha, pero suficiente como para preocuparnos. No pudimos encontrarla por ningún lado. Tras un par de días buscando, comenzamos a pensar lo peor, pero nadie en la casa parecía tener la respuesta. Recuerdo que esa tarde Clara llegó para limpiar la cocina, y decidimos preguntarle si había visto algo extraño en la sala. Clara, con una calma sorprendente, nos confesó que había encontrado la caja de dinero en el suelo cuando pasó por allí, ya que se había caído sin que nadie se diera cuenta. Sin pensarlo, Clara la había guardado en su bolso y estaba esperando el momento adecuado para devolverla. Lo más impresionante de todo fue la forma en que nos lo dijo: sin vergüenza, sin tratar de esconder nada, simplemente con sinceridad. Nos explicó que había pensado en todo momento que lo correcto era devolver el dinero, ya que pertenecía a nosotros, y aunque ella nunca pensó en quedárselo, tampoco quería que pensáramos que lo había tomado sin más. Nosotros, en shock por la honestidad de Clara, le agradecimos profundamente. A lo largo de esos años trabajando con nosotros, nunca habíamos tenido ninguna queja sobre su trabajo, pero esta situación nos hizo darnos cuenta de que Clara era mucho más que una empleada doméstica, era una persona íntegra y de confianza. En un mundo donde, muchas veces, se duda de las buenas intenciones, Clara nos mostró que aún existen personas honestas que hacen lo correcto sin esperar nada a cambio."
+
+  },
+  {
+    id: 2,
+    image: "https://i.ibb.co/wCD38j0/Ana.jpg",
+    name: "Ana Pérez",
+    date: "2024-12-10",
+    summary: "Soy Ana Pérez Ruiz, y quiero contar una historia increíble sobre Laura Méndez, una ama de hogar que trabajó para nosotros durante casi dos años. Cuando decidimos contratar a Laura, mi familia ya estaba atravesando un momento difícil. Mi esposa había estado enferma durante algún tiempo y, con los niños en casa, el hogar se estaba volviendo un caos. Necesitábamos ayuda, pero también sabíamos que debía ser alguien confiable y con buen corazón. Desde que Laura comenzó a trabajar con nosotros, nuestra vida cambió por completo. Ella no solo se encargó de las tareas de limpieza, sino que también se encargó de organizar la casa de una manera que jamás imaginamos. Siempre con una actitud positiva, hizo todo lo posible para que mi esposa estuviera cómoda, y sus pequeños gestos de cariño fueron realmente notables. Si algún día mi esposa no podía levantarse de la cama, Laura no dudaba en darle un poco de compañía, asegurándose de que se sintiera atendida y cuidada. Lo que más me impactó de Laura fue algo que sucedió un día por accidente. Estábamos de vacaciones fuera de la ciudad, y por razones de seguridad, habíamos dejado una suma de dinero en efectivo en una de las habitaciones de nuestra casa, ya que no queríamos dejarlo en el banco. Cuando regresamos, nos dimos cuenta de que algo no estaba en su lugar. La caja con el dinero había desaparecido. Aunque pensamos que el dinero estaba seguro, comenzamos a preocuparnos. Una noche, mientras estábamos en medio de la incertidumbre, Laura se presentó en nuestra casa, un poco nerviosa pero con una expresión seria en su rostro. Nos dijo que había algo importante que quería contarnos. Nos explicó que, mientras limpiaba la habitación donde había dejado el dinero, se dio cuenta de que había un sobre con algo dentro, pero al abrirlo, vio que era mucho más de lo que pensaba. El dinero que pensábamos perdido estaba en sus manos, y sin dudarlo, lo había guardado para devolvérnoslo cuando regresáramos. Nos quedamos absolutamente sorprendidos. Laura no solo había sido cuidadosa al encontrar el dinero, sino que su honestidad al venir a devolverlo fue algo que nos dejó sin palabras. Agradecimos mucho su gesto, no solo por devolver el dinero, sino por demostrarnos que aún existen personas que valoran la confianza y la honestidad por encima de cualquier otra cosa."
+  },
+  {
+    id: 3,
+    image: "https://i.ibb.co/P5TM3Z2/Daniela.jpg",
+      name: "Daniela Galván",
+    date: "2024-12-10",
+    summary: "Quiero compartir una mala experiencia que tuvimos con una ama de hogar llamada Claudia Ramírez. Decidimos contratarla para que se encargara de la limpieza y organización de nuestra casa, ya que mi esposo y yo estábamos trabajando muchas horas y no teníamos tiempo para mantener todo en orden. Al principio, Claudia parecía ser muy amable y profesional. Se adaptó rápidamente a nuestra rutina y parecía entender nuestras necesidades. Sin embargo, con el paso de las semanas, comenzamos a notar comportamientos extraños. A veces, cuando llegábamos a casa, nos dábamos cuenta de que cosas en la cocina y el salón estaban en lugares distintos a donde las habíamos dejado. Además, hubo ocasiones en las que Claudia no cumplía con las tareas que le habíamos asignado, como limpiar ciertas áreas o incluso dejar de hacer la colada. Una tarde, cuando regresamos, encontramos que una de las habitaciones estaba cerrada con llave, algo que nunca había sucedido antes. Al pedirle que nos explicara qué había pasado, Claudia se mostró evasiva y nerviosa, pero nunca nos dio una respuesta clara. Decidimos revisar la habitación y, para nuestra sorpresa, encontramos objetos personales nuestros que estaban fuera de lugar, además de pertenencias que no nos pertenecían, como artículos de ropa y productos de belleza. Nos sentimos profundamente traicionados y tuvimos que despedirla inmediatamente. Después de investigar un poco más, descubrimos que Claudia había estado robando cosas de la casa durante semanas, pero nunca lo había admitido. Fue una experiencia muy desagradable que nos hizo ser más cautelosos al contratar a alguien para trabajar en nuestro hogar.",
+  },
+  {
+    id: 4,
+    image: "https://i.ibb.co/ngpkHGz/Raul.jpg",
+    name: "Raúl González",
+    date: "2024-12-10",
+    summary: "Mi nombre es Raúl y quiero contarles la experiencia negativa que tuvimos con una ama de hogar llamada Lucía Pérez. La contratamos para que se encargara de la limpieza y organización de nuestra casa, ya que teníamos horarios complicados y necesitábamos ayuda en las tareas del hogar. Lucía parecía ser una persona responsable y con buena disposición al principio. Sin embargo, después de unas semanas, empezamos a notar que las cosas no estaban saliendo como esperábamos. Primero, comenzó a llegar tarde y, cuando llegaba, parecía estar poco motivada para hacer su trabajo. Las áreas que se suponía que debía limpiar, como la cocina y los baños, no se hacían correctamente. A menudo, dejaba suciedad en lugares evidentes o simplemente no completaba las tareas asignadas. Cuando le comentamos sobre estos problemas, Lucía nos dio excusas y prometió mejorar, pero la situación no cambió. Lo peor vino cuando empezamos a encontrar objetos personales de nuestra familia en lugares extraños, y notamos que ciertos artículos de valor empezaron a faltar. Al principio pensamos que podríamos haberlos perdido, pero nos dimos cuenta de que algunos objetos solo podían haber sido tomados por alguien que conocía bien la casa. Decidimos despedirla, pero lo más sorprendente fue su reacción. En lugar de asumir su responsabilidad, Lucía trató de culpar a otros miembros de la familia y negó cualquier acusación, lo que nos dejó muy disgustados. La experiencia nos dejó una sensación de desconfianza, y desde entonces, hemos sido mucho más cuidadosos al elegir personal para el hogar.",
+  },
+  {
+    id: 4,
+    image: "https://i.ibb.co/wMfbbJS/Jose.jpg",
+    name: "José Martínez",
+    date: "2024-12-10",
+    summary: "Mi nombre es José y quiero contarles sobre una increíble ama de hogar llamada Elena Torres, quien trabajó con nosotros durante más de un año. Desde el primer día que llegó a nuestra casa, supimos que habíamos tomado la decisión correcta. Teníamos una rutina agitada, con mi esposa y yo trabajando a tiempo completo y nuestros hijos siempre ocupados con sus actividades. Necesitábamos alguien que no solo se encargara de las tareas domésticas, sino que también pudiera ayudar a que el ambiente de la casa fuera más armonioso. Elena no solo cumplió con todas sus tareas de limpieza y organización, sino que siempre mostró una actitud positiva y un cariño especial por nuestra familia. Era como si hubiera sentido que formaba parte de nosotros. Siempre tenía una sonrisa en el rostro y hacía que los días difíciles fueran mucho más fáciles de llevar. En una ocasión, mi esposa estaba pasando por un momento complicado debido a estrés en el trabajo, y Elena no solo se encargó de su labor habitual, sino que, al ver que estaba agotada, le preparó una taza de té y se quedó un rato para conversar y hacerle compañía. Un gesto pequeño, pero que significó mucho para nosotros. Lo que más nos impresionó de Elena fue su honestidad. Un día, mientras estaba limpiando el salón, encontró un sobre con dinero que había caído entre unos muebles. En lugar de quedárselo, lo trajo inmediatamente a nuestra habitación, diciéndonos que lo había encontrado y que debíamos asegurarnos de que no se hubiera perdido de alguna parte. Ese tipo de integridad es algo que realmente apreciamos. Elena se ganó nuestra confianza por completo, y siempre la recordaremos como una persona que no solo hizo su trabajo, sino que aportó valor humano a nuestra vida.",
+  }
+];
+const listImg = [
+  'https://i.ibb.co/tCrVzdq/Picsart-24-12-10-23-37-36-338.png',
+  'https://i.ibb.co/JFChmWx/Picsart-24-12-10-23-44-23-157.png',
+  'https://i.ibb.co/DGTj74S/Picsart-24-12-10-23-42-33-422.png',
+  'https://i.ibb.co/x66r2Rg/Picsart-24-12-10-23-45-48-253.png',
+  'https://i.ibb.co/HnC2k7T/Picsart-24-12-10-23-39-40-756.png',
+]
+
+// img to use
+const imgHeader = ref(listImg[0])
+
+// intervalo en milisegundos
+const intervalTime = 5000  // 5 segundos
+
+const toggleImg = (): void => {
+  let i = 0;  // Inicializamos el índice aquí
+
+  // Primero, cambiamos la imagen inmediatamente
+  imgHeader.value = listImg[i];
+
+  // Luego, usamos setInterval para los siguientes cambios a partir del segundo ciclo
+  const interval = setInterval(() => {
+    i = (i + 1) % listImg.length;  // Avanzamos al siguiente índice y reiniciamos cuando llegamos al final
+    imgHeader.value = listImg[i];  // Cambiamos la imagen
+  }, intervalTime);
+};
+
+onMounted(() => {
+  toggleImg();
+})
+
+
 </script>
 
-<style scoped></style>
+<style scoped>
+
+</style>
