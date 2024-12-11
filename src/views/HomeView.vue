@@ -168,25 +168,33 @@
   <h2 class="text-2xl text-white">Right Section</h2>
   <!-- ads cards -->
   <div class="relative w-3/4 bg-black min-h-56 rounded-xl">
-    <img src="https://images.pexels.com/photos/753331/pexels-photo-753331.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="absolute top-0 left-0 object-cover w-full h-full">
-    <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50 rounded-xl"></div> <!-- Overlay -->
-    <h2 class="relative z-10 text-2xl text-center text-white">negocioamerica.com</h2>
-    <h3 class="relative z-10 mt-4 text-center text-white lg:text-lg">¿Desea importar productos de México hacia su país? Somos su mejor opción</h3>
+    <a href="https://negocioamerica.com" target="_blank" rel="noopener noreferrer">
+      <img src="https://images.pexels.com/photos/753331/pexels-photo-753331.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="absolute top-0 left-0 object-cover w-full h-full">
+      <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50 rounded-xl"></div> <!-- Overlay -->
+      <h2 class="relative z-10 text-2xl text-center text-white" translate="no">negocioamerica.com</h2>
+      <h3 class="relative z-10 mt-4 text-center text-white lg:text-lg">¿Desea importar productos de México hacia su país? Somos su mejor opción</h3>
+    </a>
   </div>
   <div class="relative w-3/4 bg-white min-h-56 rounded-xl">
+    <a href="https://miexnovio.com" target="_blank" rel="noopener noreferrer">
     <img src="https://images.pexels.com/photos/18262410/pexels-photo-18262410/free-photo-of-man-kissing-bride-in-cheek.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="absolute top-0 left-0 object-cover w-full h-full">
     <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50 rounded-xl"></div> <!-- Overlay -->
-    <h2 class="relative z-10 text-2xl text-center text-white">miexnovio.com</h2>
+    <h2 class="relative z-10 text-2xl text-center text-white" translate="no">miexnovio.com</h2>
     <h3 class="relative z-10 mt-4 text-center text-white lg:text-lg">¿Mala experiencia con una exnovia?</h3>
     <h3 class="relative z-10 mt-4 text-center text-white lg:text-lg">Comparta sus experiencias con nuestros usuarios</h3>
+  </a>
+
   </div>
   <div class="relative w-3/4 bg-white min-h-56 rounded-xl">
+    <a href="https://miarrendatario.com" target="_blank" rel="noopener noreferrer">
     <img src="https://images.pexels.com/photos/8292879/pexels-photo-8292879.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="absolute top-0 left-0 object-cover w-full h-full">
     <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50 rounded-xl"></div> <!-- Overlay -->
-    <h2 class="relative z-10 text-2xl text-center text-white">miarrendatario.com</h2>
+    <h2 class="relative z-10 text-2xl text-center text-white" translate="no">miarrendatario.com</h2>
     <h3 class="relative z-10 text-center text-white lg:text-lg">¿Necesita ayuda para encontrar un arrendatario?</h3>
     <h3 class="relative z-10 text-center text-white lg:text-lg">Visitenos y descubra lo que necesita</h3>
+  </a>
   </div>
+
 </aside>
 
 
@@ -208,13 +216,13 @@
 
     <!-- Botón para agregar nuevo comentario -->
     <router-link
-      to="/create-comment"
+      :to="{name:'login'}"
       class="block px-4 py-2 mt-4 text-center text-white bg-blue-600 rounded-lg shadow hover:bg-blue-700"
     >
       Crear Comentario <i class="fas fa-comment-alt"></i>
     </router-link>
     <router-link
-      to="/create-comment"
+      :to="{name:'login'}"
       class="block px-4 py-2 mt-4 text-center text-white rounded-lg shadow bg-sky-600 hover:bg-blue-700"
     >
       Leer más experiencias <i class="fas fa-angle-double-right"></i>

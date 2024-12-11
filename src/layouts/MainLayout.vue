@@ -108,7 +108,7 @@
     <RouterLink :to="{name:'login'}" class="font-semibold underline text-sky-900 hover:text-sky-500">Comentarios</RouterLink>
     <RouterLink :to="{name:'home'}" class="font-semibold underline text-sky-900 hover:text-sky-500">Contacto</RouterLink>
     <!-- <RouterLink :to="{name:'home'}" class="font-semibold underline text-sky-900 hover:text-sky-500">Acciones</RouterLink> -->
-    <RouterLink :to="{name:'register'}" class="font-semibold underline text-sky-900 hover:text-sky-500">Crear Registro</RouterLink>
+    <RouterLink :to="{name:'register'}" class="font-semibold underline text-sky-900 hover:text-sky-500">Registrarse</RouterLink>
     <RouterLink :to="{name:'login'}" class="font-semibold underline text-sky-900 hover:text-sky-500">Iniciar Sesión</RouterLink>
     <!-- <RouterLink :to="{name:'home'}" class="font-semibold underline text-sky-900 hover:text-sky-500">Seguridad</RouterLink> -->
     <RouterLink :to="{name:'policy'}" class="font-semibold underline text-sky-900 hover:text-sky-500">Aviso de Privacidad</RouterLink>

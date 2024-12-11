@@ -47,9 +47,7 @@
                     </button>
                 </div>
                 <div class="text-center">
-                    <a class="text-sm text-gray-700 transition duration-300 hover:text-gray-900" href="#">
-                        Crear cuenta
-                    </a>
+                   <RouterLink :to="{name:'register'}" class="font-semibold underline text-sky-900 hover:text-sky-500">Crear cuenta</RouterLink>
                 </div>
             </form>
         </div>
