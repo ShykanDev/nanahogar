@@ -23,10 +23,7 @@
                 <hr />
                 <!-- list info -->
                 <ul>
-                  <li class="mb-2 text-sm font-poppins" v-for="item in infoArr" :key="item.id">
-                    <strong class="text-yellow-700">{{ item.property }}:</strong>
-                    {{ item.description }}
-                  </li>
+
                   <hr />
                 </ul>
               </div>
