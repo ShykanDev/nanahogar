@@ -71,7 +71,7 @@ defineProps({
   stars: {
     type: Number,
     default: 3, // Valor por defecto para las estrellas
-    validator: (value) => value >= 1 && value <= 5,
+    validator: (value:number) => value >= 1 && value <= 5,
   },
 });
 </script>
