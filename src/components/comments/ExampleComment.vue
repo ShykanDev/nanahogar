@@ -1,11 +1,7 @@
 <template>
   <div class="flex items-start p-4 mb-4 space-x-4 bg-white rounded-lg shadow-sm comment">
     <!-- Imagen del usuario -->
-    <img
-      :src="image"
-      alt="User Avatar"
-      class="object-cover w-12 h-12 rounded-full"
-    />
+    <img :src="image" alt="User Avatar" class="object-cover w-12 h-12 rounded-full" />
 
     <!-- Contenido del comentario -->
     <div class="flex-1">
@@ -16,7 +12,6 @@
       </p>
       <p class="mt-2 text-sm text-gray-700">{{ summary }}</p>
     </div>
-
   </div>
 </template>
 
@@ -24,23 +19,21 @@
 defineProps({
   image: {
     type: String,
-    required: true
+    required: true,
   },
   name: {
     type: String,
-    required: true
+    required: true,
   },
   date: {
     type: String,
-    required: true
+    required: true,
   },
   summary: {
     type: String,
-    required: true
-  }
-});
+    required: true,
+  },
+})
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

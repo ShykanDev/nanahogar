@@ -23,7 +23,6 @@
                 <hr />
                 <!-- list info -->
                 <ul>
-
                   <hr />
                 </ul>
               </div>

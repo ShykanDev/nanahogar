@@ -1,17 +1,17 @@
-import { defineStore } from "pinia";
+import { defineStore } from 'pinia'
 
-export const useHeaderStore  = defineStore('useHeaderStore', ({
+export const useHeaderStore = defineStore('useHeaderStore', {
   state: () => ({
-    showMenu : false,
+    showMenu: false,
   }),
-  getters:{
-   isMenuToggled(state):boolean{
-    return state.showMenu;
-   }
+  getters: {
+    isMenuToggled(state): boolean {
+      return state.showMenu
+    },
   },
-  actions:{
-    toggleMenu():void{
-      this.showMenu = !this.showMenu;
-    }
-  }
-}))
+  actions: {
+    toggleMenu(): void {
+      this.showMenu = !this.showMenu
+    },
+  },
+})
