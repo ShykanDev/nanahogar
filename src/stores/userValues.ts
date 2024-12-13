@@ -5,7 +5,8 @@ export const useUserValues = defineStore("useUserValues", {
     isUserAuthenticated: false,  // Renombrado la propiedad del estado
     userName: "",
     showWelcome: false,
-    firstAnimation: false
+    firstAnimation: false,
+    maintenanceMode: true,
   }),
   getters: {
     isUserAuth(state): boolean {
@@ -19,6 +20,9 @@ export const useUserValues = defineStore("useUserValues", {
     },
     getFirstAnimation(state): boolean {
       return state.firstAnimation;
+    },
+    getMaintenanceMode(state): boolean {
+      return state.maintenanceMode;
     }
   },
   actions: {

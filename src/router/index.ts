@@ -110,6 +110,14 @@ const router = createRouter({
       }
     },
     {
+      path: '/mantenimiento',
+      name: 'maintenance',
+      component: () => import('../views/MaintenanceModeView.vue'),
+      meta:{
+        requireAuth:false
+      }
+    },
+    {
       path: '/:patchMatch(.*)',
       redirect: { name: 'home' },
     },
@@ -125,10 +133,20 @@ const router = createRouter({
 
 router.beforeEach((to, from, next) => {
   const isUserAuth = useUserValues().isUserAuth;
-    if(to.meta.requireAuth && !isUserAuth) {
-      next({ name: 'login' });
-    } else {
-      next();
-    }
-})
+  const isMaintenanceMode = useUserValues().getMaintenanceMode;
+  console.log('maintenanceMode', isMaintenanceMode);
+
+  // Si estamos en modo mantenimiento, pero no estamos ya en la página de mantenimiento
+  if (isMaintenanceMode && to.name !== 'maintenance') {
+    next({ name: 'maintenance' }); // Redirige solo si no estamos ya en la página de mantenimiento
+  } else if (to.meta.requireAuth && !isUserAuth) {
+    // Si se requiere autenticación y el usuario no está autenticado, redirige a login
+    next({ name: 'login' });
+  } else {
+    // Si todo está bien, permite la navegación
+    next();
+  }
+});
+
+
 export default router
