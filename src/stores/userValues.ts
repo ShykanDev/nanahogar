@@ -6,7 +6,7 @@ export const useUserValues = defineStore("useUserValues", {
     userName: "",
     showWelcome: false,
     firstAnimation: false,
-    maintenanceMode: true,
+    maintenanceMode: false,
   }),
   getters: {
     isUserAuth(state): boolean {
