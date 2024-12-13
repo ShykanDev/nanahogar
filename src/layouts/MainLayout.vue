@@ -99,26 +99,27 @@
             <i class="fas fa-home"></i> Inicio
           </RouterLink>
           <RouterLink
+          v-if="!useUserValues().isUserAuth"
             :class="{ 'animate-fade-left animate-delay-200': storeHeader.isMenuToggled }"
-            :to="{ name: 'home' }"
+            :to="{ name: 'login' }"
           >
             <i class="fas fa-user"></i> Iniciar Sesión
           </RouterLink>
           <RouterLink
             :class="{ 'animate-fade-left animate-delay-75': storeHeader.isMenuToggled }"
-            :to="{ name: 'home' }"
+            :to="{ name: 'histories' }"
           >
             <i class="fas fa-book-open"></i> Historias
           </RouterLink>
           <RouterLink
             :class="{ 'animate-fade-left animate-delay-100': storeHeader.isMenuToggled }"
-            :to="{ name: 'home' }"
+            :to="{ name: 'advices' }"
           >
             <i class="fas fa-lightbulb"></i> Consejos Útiles
           </RouterLink>
           <RouterLink
             :class="{ 'animate-fade-left animate-delay-150': storeHeader.isMenuToggled }"
-            :to="{ name: 'home' }"
+            :to="{ name: 'histories' }"
           >
             <i class="fas fa-users"></i> Participar
           </RouterLink>
@@ -131,7 +132,7 @@
           </RouterLink>
           <RouterLink
             :class="{ 'animate-fade-left animate-delay-200': storeHeader.isMenuToggled }"
-            :to="{ name: 'terms' }"
+            :to="{ name: 'policy' }"
           >
             <i class="fas fa-user"></i> Politica de privacidad
           </RouterLink>
@@ -236,6 +237,7 @@
 
 <script lang="ts" setup>
 import { useHeaderStore } from '@/stores/UseHeaderStore'
+import { useUserValues } from '@/stores/userValues';
 import { onMounted, ref } from 'vue';
 const currentDomain = ref( '<h2 class="animate-fade"><span class="text-pink-700">asesora</span><span class="text-red-800">de</span><span class="text-sky-950">hogar</span><span class="text-red-800">.com</span></h2>',); // Usamos un array como el valor inicial
 
