@@ -1,8 +1,11 @@
 <template>
   <div class="w-5/6 p-4 mx-auto bg-white rounded-lg shadow-md font-poppins">
     <header class="flex items-center justify-between pb-2 mb-4 border-b">
-      <h2 class="text-lg italic font-bold text-gray-800">"{{ title }}"</h2>
-      <p class="text-sm text-gray-500">{{ date }}</p>
+      <h2 class="text-lg italic font-bold text-gray-800" :class="role === 'asesora' ? 'text-rose-600' : 'text-sky-800'"  >"{{ title }}"</h2>
+      <p class="text-sm text-gray-500">
+  {{ date && date.toDate ? date.toDate().toLocaleString() : "Fecha no válida" }}
+</p>
+
     </header>
     <h2 class="text-lg font-bold text-gray-800">{{ name }}</h2>
     <div class="mb-4">
@@ -73,6 +76,9 @@ defineProps({
     default: 3, // Valor por defecto para las estrellas
     validator: (value:number) => value >= 1 && value <= 5,
   },
+  role:{
+    type: String,
+  }
 });
 </script>
 

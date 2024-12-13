@@ -159,38 +159,208 @@
   <p class="mb-4">
     Las asesoras del hogar a menudo enfrentan situaciones difíciles en su lugar de trabajo. Es común que algunos jefes no paguen a tiempo y que las hagan trabajar horas extras sin compensación adecuada. Además, hay casos en los que hombres intentan sobrepasarse con las mujeres, lo cual es inaceptable y debe ser denunciado.
   </p>
-  <div class="mb-4">
-    <h2 class="mb-2 text-xl font-semibold text-rose-800">
-      <i class="mr-2 fas fa-exclamation-circle"></i> Problemas Comunes
-    </h2>
-    <ul class="list-disc list-inside">
-      <li>
-        <i class="mr-2 fas fa-clock"></i> Retrasos en el pago de salarios
-      </li>
-      <li>
-        <i class="mr-2 fas fa-hourglass-half"></i> Horas extras no remuneradas
-      </li>
-      <li>
-        <i class="mr-2 fas fa-genderless"></i> Acoso y abuso por parte de empleadores
-      </li>
-    </ul>
-  </div>
-  <div class="mb-4">
-    <h2 class="mb-2 text-xl font-semibold text-rose-800">
-      <i class="mr-2 fas fa-tools"></i> Consejos y Recursos
-    </h2>
-    <ul class="list-disc list-inside">
-      <li>
-        <i class="mr-2 fas fa-clipboard-list"></i> Documentar todas las horas trabajadas
-      </li>
-      <li>
-        <i class="mr-2 fas fa-balance-scale"></i> Conocer los derechos laborales
-      </li>
-      <li>
-        <i class="mr-2 fas fa-hand-holding-heart"></i> Buscar apoyo en organizaciones de defensa de derechos
-      </li>
-    </ul>
-  </div>
+  <div class="container mx-auto">
+        <div class="flex flex-col w-full md:flex-row">
+            <!-- Sección de Problemas y Consejos para la Asesora -->
+            <div class="w-full p-4 md:w-1/2">
+                <h1 class="mb-4 text-2xl font-bold text-rose-800">Asesora</h1>
+                <div class="mb-4">
+                    <h2 class="mb-2 text-xl font-semibold text-rose-800">
+                        <i class="mr-2 fas fa-exclamation-circle"></i> Problemas Comunes
+                    </h2>
+                    <ul class="list-disc list-inside">
+                        <li>
+                            <i class="mr-2 fas fa-clock"></i> Retrasos en el pago de salarios
+                            <p class="text-gray-700">Los empleados no reciben sus salarios a tiempo, lo que afecta su estabilidad financiera.</p>
+                        </li>
+                        <li>
+                            <i class="mr-2 fas fa-hourglass-half"></i> Horas extras no remuneradas
+                            <p class="text-gray-700">Los empleados trabajan horas adicionales sin recibir compensación adecuada.</p>
+                        </li>
+                        <li>
+                            <i class="mr-2 fas fa-genderless"></i> Acoso y abuso por parte de empleadores
+                            <p class="text-gray-700">Los empleados enfrentan comportamientos inapropiados y abusivos en el lugar de trabajo.</p>
+                        </li>
+                        <li>
+                            <i class="mr-2 fas fa-exclamation-triangle"></i> Falta de contratos formales
+                            <p class="text-gray-700">Los empleados no tienen contratos escritos que definan sus términos de empleo.</p>
+                        </li>
+                        <li>
+                            <i class="mr-2 fas fa-user-shield"></i> Inseguridad laboral
+                            <p class="text-gray-700">Los empleados temen perder sus trabajos sin previo aviso o justificación.</p>
+                        </li>
+                        <li>
+                            <i class="mr-2 fas fa-money-bill-wave"></i> Deducciones injustas en el salario
+                            <p class="text-gray-700">Los empleadores realizan deducciones no autorizadas o injustas en los salarios de los empleados.</p>
+                        </li>
+                        <li>
+                            <i class="mr-2 fas fa-home"></i> Condiciones de trabajo insalubres
+                            <p class="text-gray-700">Los empleados trabajan en entornos que no cumplen con los estándares de salud y seguridad.</p>
+                        </li>
+                        <li>
+                            <i class="mr-2 fas fa-user-times"></i> Despidos injustificados
+                            <p class="text-gray-700">Los empleados son despedidos sin una razón válida o sin seguir el debido proceso.</p>
+                        </li>
+                        <li>
+                            <i class="mr-2 fas fa-heart-broken"></i> Falta de beneficios de salud
+                            <p class="text-gray-700">Los empleados no tienen acceso a seguros de salud o beneficios médicos.</p>
+                        </li>
+                        <li>
+                            <i class="mr-2 fas fa-user-clock"></i> Exceso de carga laboral
+                            <p class="text-gray-700">Los empleados tienen una carga de trabajo excesiva que afecta su bienestar.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mb-4">
+                    <h2 class="mb-2 text-xl font-semibold text-rose-800">
+                        <i class="mr-2 fas fa-tools"></i> Consejos y Recursos
+                    </h2>
+                    <ul class="list-disc list-inside">
+                        <li>
+                            <i class="mr-2 fas fa-clipboard-list"></i> Documentar todas las horas trabajadas
+                            <p class="text-gray-700">Llevar un registro detallado de las horas trabajadas para evitar disputas salariales.</p>
+                        </li>
+                        <li>
+                            <i class="mr-2 fas fa-balance-scale"></i> Conocer los derechos laborales
+                            <p class="text-gray-700">Informarse sobre los derechos laborales para poder defenderse adecuadamente.</p>
+                        </li>
+                        <li>
+                            <i class="mr-2 fas fa-hand-holding-heart"></i> Buscar apoyo en organizaciones de defensa de derechos
+                            <p class="text-gray-700">Contactar a organizaciones que ofrezcan asesoramiento y apoyo legal.</p>
+                        </li>
+                        <li>
+                            <i class="mr-2 fas fa-book"></i> Informarse sobre leyes laborales
+                            <p class="text-gray-700">Leer y entender las leyes laborales aplicables en su país o región.</p>
+                        </li>
+                        <li>
+                            <i class="mr-2 fas fa-users"></i> Unirse a sindicatos o grupos de apoyo
+                            <p class="text-gray-700">Participar en sindicatos o grupos que defiendan los derechos de los trabajadores.</p>
+                        </li>
+                        <li>
+                            <i class="mr-2 fas fa-phone-alt"></i> Tener a mano números de contacto de emergencia
+                            <p class="text-gray-700">Guardar números de contacto de emergencia para situaciones críticas.</p>
+                        </li>
+                        <li>
+                            <i class="mr-2 fas fa-file-alt"></i> Guardar copias de todos los documentos importantes
+                            <p class="text-gray-700">Mantener copias de contratos, recibos de pago y otros documentos relevantes.</p>
+                        </li>
+                        <li>
+                            <i class="mr-2 fas fa-comments"></i> Mantener una comunicación abierta con el empleador
+                            <p class="text-gray-700">Fomentar una comunicación clara y abierta con el empleador para resolver problemas.</p>
+                        </li>
+                        <li>
+                            <i class="mr-2 fas fa-user-friends"></i> Buscar apoyo emocional en amigos y familiares
+                            <p class="text-gray-700">Contar con el apoyo emocional de seres queridos en momentos difíciles.</p>
+                        </li>
+                        <li>
+                            <i class="mr-2 fas fa-chalkboard-teacher"></i> Participar en talleres y capacitaciones
+                            <p class="text-gray-700">Asistir a talleres y capacitaciones para mejorar habilidades y conocimientos.</p>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <!-- Sección de Problemas y Consejos para el Dueño -->
+            <div class="w-full p-4 md:w-1/2">
+                <h1 class="mb-4 text-2xl font-bold text-sky-800">Dueño</h1>
+                <div class="mb-4">
+                    <h2 class="mb-2 text-xl font-semibold text-sky-800">
+                        <i class="mr-2 fas fa-exclamation-circle"></i> Problemas Comunes
+                    </h2>
+                    <ul class="list-disc list-inside">
+                        <li>
+                            <i class="mr-2 fas fa-clock"></i> Dificultad para encontrar personal confiable
+                            <p class="text-gray-700">Los empleadores tienen problemas para encontrar empleados en los que puedan confiar.</p>
+                        </li>
+                        <li>
+                            <i class="mr-2 fas fa-hourglass-half"></i> Problemas de comunicación
+                            <p class="text-gray-700">Existen barreras de comunicación que dificultan la relación laboral.</p>
+                        </li>
+                        <li>
+                            <i class="mr-2 fas fa-genderless"></i> Desacuerdos sobre responsabilidades
+                            <p class="text-gray-700">Los empleadores y empleados no están de acuerdo sobre las tareas y responsabilidades.</p>
+                        </li>
+                        <li>
+                            <i class="mr-2 fas fa-exclamation-triangle"></i> Falta de formación adecuada
+                            <p class="text-gray-700">Los empleados no reciben la formación necesaria para realizar sus tareas correctamente.</p>
+                        </li>
+                        <li>
+                            <i class="mr-2 fas fa-user-shield"></i> Inseguridad sobre la legalidad de contratos
+                            <p class="text-gray-700">Los empleadores no están seguros de si sus contratos cumplen con las leyes laborales.</p>
+                        </li>
+                        <li>
+                            <i class="mr-2 fas fa-exclamation-triangle"></i> Acoso o abuso por parte del personal
+                            <p class="text-gray-700">Los empleadores enfrentan comportamientos inapropiados y abusivos por parte de los empleados.</p>
+                        </li>
+                        <li>
+                            <i class="mr-2 fas fa-exclamation-triangle"></i> Robo o pérdida de propiedad
+                            <p class="text-gray-700">Los empleadores sufren pérdidas debido al robo o mal manejo de la propiedad.</p>
+                        </li>
+                        <li>
+                            <i class="mr-2 fas fa-user-times"></i> Alta rotación de personal
+                            <p class="text-gray-700">Los empleadores tienen dificultades para mantener a los empleados a largo plazo.</p>
+                        </li>
+                        <li>
+                            <i class="mr-2 fas fa-money-bill-wave"></i> Costos inesperados de indemnización
+                            <p class="text-gray-700">Los empleadores enfrentan gastos imprevistos relacionados con indemnizaciones.</p>
+                        </li>
+                        <li>
+                            <i class="mr-2 fas fa-home"></i> Dificultad para mantener un ambiente de trabajo seguro
+                            <p class="text-gray-700">Los empleadores luchan por garantizar un entorno de trabajo seguro y saludable.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mb-4">
+                    <h2 class="mb-2 text-xl font-semibold text-sky-800">
+                        <i class="mr-2 fas fa-tools"></i> Consejos y Recursos
+                    </h2>
+                    <ul class="list-disc list-inside">
+                        <li>
+                            <i class="mr-2 fas fa-clipboard-list"></i> Establecer un contrato claro
+                            <p class="text-gray-700">Definir claramente los términos y condiciones del empleo en un contrato escrito.</p>
+                        </li>
+                        <li>
+                            <i class="mr-2 fas fa-balance-scale"></i> Ofrecer formación y recursos
+                            <p class="text-gray-700">Proporcionar la formación y los recursos necesarios para que los empleados realicen su trabajo de manera efectiva.</p>
+                        </li>
+                        <li>
+                            <i class="mr-2 fas fa-hand-holding-heart"></i> Crear un ambiente de trabajo respetuoso
+                            <p class="text-gray-700">Fomentar un entorno de trabajo donde se respete a todos los empleados.</p>
+                        </li>
+                        <li>
+                            <i class="mr-2 fas fa-book"></i> Informarse sobre leyes laborales
+                            <p class="text-gray-700">Conocer y cumplir con las leyes laborales aplicables para evitar problemas legales.</p>
+                        </li>
+                        <li>
+                            <i class="mr-2 fas fa-users"></i> Participar en asociaciones de empleadores
+                            <p class="text-gray-700">Unirse a asociaciones que ofrezcan apoyo y recursos a los empleadores.</p>
+                        </li>
+                        <li>
+                            <i class="mr-2 fas fa-shield-alt"></i> Implementar medidas de seguridad
+                            <p class="text-gray-700">Adoptar medidas de seguridad para proteger a los empleados y la propiedad.</p>
+                        </li>
+                        <li>
+                            <i class="mr-2 fas fa-comments"></i> Mantener una comunicación abierta y honesta
+                            <p class="text-gray-700">Fomentar una comunicación clara y honesta con los empleados para resolver problemas.</p>
+                        </li>
+                        <li>
+                            <i class="mr-2 fas fa-user-check"></i> Realizar evaluaciones periódicas del personal
+                            <p class="text-gray-700">Evaluar regularmente el desempeño de los empleados para identificar áreas de mejora.</p>
+                        </li>
+                        <li>
+                            <i class="mr-2 fas fa-handshake"></i> Fomentar la confianza mutua
+                            <p class="text-gray-700">Construir una relación de confianza mutua con los empleados.</p>
+                        </li>
+                        <li>
+                            <i class="mr-2 fas fa-chalkboard-teacher"></i> Ofrecer incentivos y beneficios
+                            <p class="text-gray-700">Proporcionar incentivos y beneficios para motivar a los empleados y mejorar la retención.</p>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
   <div class="mb-4">
     <h2 class="mb-2 text-xl font-semibold text-rose-800">
       <i class="mr-2 fas fa-comments"></i> Historias de Asesoras del Hogar
@@ -455,11 +625,14 @@ const comments = [
   },
 ]
 const listImg = [
+  'https://i.ibb.co/19fHNJs/IMG-20241213-022720.png',
+  'https://i.ibb.co/pR94fNW/IMG-20241213-022934.png',
+  'https://i.ibb.co/1n0yxTJ/IMG-20241213-022840.png',
   'https://i.ibb.co/tCrVzdq/Picsart-24-12-10-23-37-36-338.png',
-  'https://i.ibb.co/JFChmWx/Picsart-24-12-10-23-44-23-157.png',
   'https://i.ibb.co/DGTj74S/Picsart-24-12-10-23-42-33-422.png',
   'https://i.ibb.co/x66r2Rg/Picsart-24-12-10-23-45-48-253.png',
-  'https://i.ibb.co/HnC2k7T/Picsart-24-12-10-23-39-40-756.png',
+  'https://i.ibb.co/HnC2k7T/Picsart-24-12-10-23-39-40-756.png',,
+  'https://i.ibb.co/JFChmWx/Picsart-24-12-10-23-44-23-157.png',
 ]
 
 // img to use

@@ -106,7 +106,8 @@
           </p>
           <p class="mt-4 text-center text-gray-600">
             <i class="text-blue-500 fas fa-info-circle"></i> Al registrarte, aceptas nuestros
-            <a href="#" class="text-blue-500 hover:underline">Términos y Condiciones</a>.
+            <!-- router link to name terms -->
+                <RouterLink class="text-sky-600" :to="{name:'terms'}">Términos y Condiciones</RouterLink>
           </p>
         </div>
       </section>

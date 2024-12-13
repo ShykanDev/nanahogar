@@ -2,101 +2,124 @@
   <MainLayout>
     <template #main>
       <article class="overflow-hidden">
-      <section class="flex overflow-hidden">
-        <article class="w-1/2 py-4 space-y-4 animate-fade-left">
+        <section class="flex overflow-hidden">
+          <article class="w-1/2  space-y-4 overflow-auto animate-fade-left md:h-[700px] border-r-4 border-sky-600">
 
-          <h2 class="py-5 text-2xl font-semibold text-center uppercase bg-white rounded-lg shadow-md text-sky-800 font-poppins">
-  <i class="mr-2 fas fa-comment"></i> Comentarios de Dueños del Hogar  <i class="mr-2 fas fa-home"></i>
-</h2>
+            <h2
+              class="sticky top-0 z-40 py-5 text-2xl font-semibold text-center uppercase bg-white rounded-lg shadow-md bg-opacity-85 min-h-20 text-sky-800 font-poppins">
+              <i class="mr-2 fas fa-comment"></i> Comentarios de Dueños del Hogar <i class="mr-2 fas fa-home"></i>
+            </h2>
 
-    <div class="flex justify-center w-full">
-      <a href="#comentar" class="px-6 py-2 mt-5 text-sm font-semibold text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2" >
-        Comentar como dueño
-      </a>
-    </div>
-          <CommentCard v-for="story in stories" :title="story.title" :key="story.name" :name="story.name"
-            :date="story.date" :comment="story.comment" :stars="story.stars" />
-        </article>
-        <article class="w-1/2 space-y-4 bg-slate-50 animate-fade-left animate-delay-200">
+            <div @click="toggleRole('dueño')" class="flex justify-center w-full animate-shake animate-delay-500">
+              <a href="#comentar"
+                class="px-6 py-2 mt-5 text-sm font-semibold text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2">
+                Comentar como dueño
+              </a>
+            </div>
+            <CommentCard v-for="story in commentsArray.filter(story => story.role === 'dueño')" :title="story.title"
+              :key="story.name" :name="story.name" :date="story.date" :comment="story.comment" :stars="story.rating" :role="story.role" />
+
+            <ContentLoading v-if="commentsArray.length < 1" />
+            <ContentLoading v-if="commentsArray.length < 1" />
+            <ContentLoading v-if="commentsArray.length < 1" />
+            <ContentLoading v-if="commentsArray.length < 1" />
+          </article>
+          <article
+            class="w-1/2 space-y-4 bg-slate-50 animate-fade-left animate-delay-200 md:h-[700px] overflow-auto border-l-2 border-red-500">
             <!-- <h2 class="sticky py-5 text-2xl font-semibold text-center uppercase bg-white rounded-lg shadow-md min-h-20 text-rose-800 font-poppins">Comentarios de Asesoras del Hogar</h2> -->
-            <h2 class="sticky top-0 py-5 text-2xl font-semibold text-center uppercase bg-white rounded-lg shadow-md min-h-20 text-rose-800 font-poppins">
-  <i class="mr-2 fas fa-female"></i> Comentarios de Asesoras del Hogar <i class="ml-2 fas fa-comment-dots"></i>
-</h2>
-<div class="flex justify-center w-full">
-      <a href="#comentar" class="px-6 py-2 mt-5 text-sm font-semibold text-white rounded-md bg-rose-500 hover:bg-rose-600 focus:outline-none focus:ring-2 focus:ring-rose-300 focus:ring-offset-2" >
-        Comentar como asesora de hogar
-      </a>
-    </div>
-          <CommentCard v-for="story in storiesNana" :title="story.title" :key="story.name" :name="story.name" :date="story.date"
-            :comment="story.comment" :stars="story.stars" />
-
-        </article>
-      </section>
-      <!-- comment -->
-      <section id="comentar" class="py-5 bg-gray-50">
-        <section class="w-10/12 p-6 mx-auto bg-white rounded-lg shadow-lg font-poppins">
-          <h2 class="mb-4 text-2xl font-semibold text-center text-slate-800">Compartir historia</h2>
-
-          <!-- Toggle para seleccionar el rol -->
-          <div class="mb-4">
-            <label class="text-sm font-semibold text-gray-600">Comentar como:</label>
-            <div class="flex items-center mt-2 space-x-4">
-              <label for="owner" class="flex items-center cursor-pointer">
-                <i class="mr-2 fas fa-user-tie text-sky-900"></i> <!-- Icono de dueño -->
-                <input type="radio" id="owner" v-model="role" value="dueño" class="mr-2" />
-                Dueño
-              </label>
-              <label for="helper" class="flex items-center cursor-pointer">
-                <i class="mr-2 fas fa-female text-rose-600"></i> <!-- Icono de asesora -->
-                <input type="radio" id="helper" v-model="role" value="asesora" class="mr-2" />
-                Asesora del hogar
-              </label>
+            <h2
+              class="sticky top-0 z-40 py-5 text-2xl font-semibold text-center uppercase bg-white rounded-lg shadow-md bg-opacity-85 min-h-20 text-rose-800 font-poppins">
+              <i class="mr-2 fas fa-female"></i> Comentarios de Asesoras del Hogar <i
+                class="ml-2 fas fa-comment-dots"></i>
+            </h2>
+            <div @click="toggleRole('asesora')" class="flex justify-center w-full animate-shake animate-delay-500">
+              <a href="#comentar"
+                class="px-6 py-2 mt-5 text-sm font-semibold text-white rounded-md bg-rose-500 hover:bg-rose-600 focus:outline-none focus:ring-2 focus:ring-rose-300 focus:ring-offset-2">
+                Comentar como asesora de hogar
+              </a>
             </div>
-          </div>
-
-          <!-- Comentario -->
-          <div class="mb-4">
-            <h3 class="py-2 text-sm italic font-medium text-gray-600">Se usará automáticamente el nombre de usuario con
-              el que se registró</h3>
-            <label for="comment" class="block text-sm font-medium text-gray-900">Título de la Historia</label>
-            <input type="text" id="comment" v-model="comment"
-              placeholder="Agradezco a mi trabajadora doméstica por su honestidad y compromiso"
-              class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-md shadow-sm focus:ring-sky-500 focus:border-sky-500" />
-          </div>
-
-          <div class="mb-4">
-            <label for="fullComment" class="block text-sm font-medium text-gray-700">Historia</label>
-            <textarea id="fullComment" v-model="fullComment" placeholder="Escribe tu Historia aquí..."
-              class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-md shadow-sm focus:ring-sky-500 focus:border-sky-500"
-              rows="4"></textarea>
-          </div>
-
-          <!-- Estrellas para Rating -->
-          <div class="flex items-center mb-4 space-x-1">
-            <span class="text-sm font-medium text-gray-700">Calificación:</span>
-            <div class="flex items-center">
-              <span @click="setRating(1)" :class="{ 'text-yellow-500': rating >= 1, 'text-gray-300': rating < 1 }"
-                class="cursor-pointer fas fa-star fa-lg"></span>
-              <span @click="setRating(2)" :class="{ 'text-yellow-500': rating >= 2, 'text-gray-300': rating < 2 }"
-                class="cursor-pointer fas fa-star fa-lg"></span>
-              <span @click="setRating(3)" :class="{ 'text-yellow-500': rating >= 3, 'text-gray-300': rating < 3 }"
-                class="cursor-pointer fas fa-star fa-lg"></span>
-              <span @click="setRating(4)" :class="{ 'text-yellow-500': rating >= 4, 'text-gray-300': rating < 4 }"
-                class="cursor-pointer fas fa-star fa-lg"></span>
-              <span @click="setRating(5)" :class="{ 'text-yellow-500': rating >= 5, 'text-gray-300': rating < 5 }"
-                class="cursor-pointer fas fa-star fa-lg"></span>
-            </div>
-          </div>
-
-          <!-- Botón de Enviar -->
-          <button @click="submitComment"
-            class="w-full py-2 text-white rounded-md shadow-md bg-sky-800 hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-sky-500">
-            <i class="mr-2 fas fa-paper-plane"></i> Enviar Historia <!-- Icono del botón de envío -->
-          </button>
+            <CommentCard v-for="story in commentsArray.filter(story => story.role === 'asesora')" :title="story.title"
+              :key="story.name" :name="story.name" :date="story.date" :comment="story.comment" :stars="story.rating" :role="story.role" />
+            <ContentLoading v-if="commentsArray.length < 1 " />
+            <ContentLoading v-if="commentsArray.length < 1 " />
+            <ContentLoading v-if="commentsArray.length < 1 " />
+            <ContentLoading v-if="commentsArray.length < 1 " />
+          </article>
         </section>
+        <!-- comment -->
+        <section class="py-5 bg-gray-50">
+          <div class="py-8" id="comentar"></div>
+          <section
+            class="w-11/12 p-6 mx-auto transition-colors duration-1000 ease-out bg-white border-4 rounded-lg shadow-lg font-poppins"
+            :class="role === 'dueño' ? 'border-sky-600' : 'border-rose-600'">
+            <h2 class="mb-4 text-3xl font-semibold text-center "
+              :class="role === 'dueño' ? 'text-sky-800' : 'text-rose-800'">Compartir historia</h2>
 
-      </section>
-    </article>
+            <!-- Toggle para seleccionar el rol -->
+            <div class="mb-4">
+              <label class="text-sm font-semibold text-gray-600">Comentar como:</label>
+              <div class="flex items-center mt-2 space-x-4">
+                <label for="owner" class="flex items-center font-semibold cursor-pointer text-sky-800">
+                  <i class="mr-2 fas fa-user-tie text-sky-900"></i> <!-- Icono de dueño -->
+                  <input type="radio" id="owner" v-model="role" value="dueño" class="mr-2" />
+                  Dueño
+                </label>
+                <label for="helper" class="flex items-center font-semibold cursor-pointer text-rose-600">
+                  <i class="mr-2 fas fa-female text-rose-600"></i> <!-- Icono de asesora -->
+                  <input type="radio" id="helper" v-model="role" value="asesora" class="mr-2" />
+                  Asesora del hogar
+                </label>
+              </div>
+            </div>
+
+            <!-- Comentario -->
+            <div class="mb-4">
+              <h3 class="py-2 text-sm italic font-medium text-gray-600">Se usará automáticamente el nombre de usuario
+                con
+                el que se registró</h3>
+              <label for="comment" class="block text-sm font-medium"
+                :class="role === 'dueño' ? 'text-sky-800' : 'text-rose-800'">Título de la Historia</label>
+              <input type="text" id="comment" v-model="title"
+                placeholder="Agradezco a mi trabajadora doméstica por su honestidad y compromiso"
+                class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-md shadow-sm focus:ring-sky-500 focus:border-sky-500" />
+            </div>
+
+            <div class="mb-4">
+              <label for="fullComment" class="block text-sm font-medium text-gray-700"
+                :class="role === 'dueño' ? 'text-sky-800' : 'text-rose-800'">Historia</label>
+              <textarea id="fullComment" v-model="fullComment"
+                placeholder="Soy Laura Méndez y quiero compartir mi experiencia trabajando con la familia Pérez. Durante casi dos años, me encargué de las tareas del hogar, pero lo que realmente me hizo sentir especial fue la forma en que me trataron. Siempre hubo respeto y un ambiente de apoyo mutuo, especialmente en los momentos difíciles."
+                class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-md shadow-sm focus:ring-sky-500 focus:border-sky-500"
+                rows="4"></textarea>
+            </div>
+            <!-- Estrellas para Rating -->
+            <p class="mb-2 text-sm font-medium text-gray-700 underline">Califique su experiencia</p>
+            <div class="flex items-center mb-4 space-x-1">
+              <span class="text-sm font-medium text-gray-700">Calificación:</span>
+              <div class="flex items-center">
+                <span @click="setRating(1)" :class="{ 'text-yellow-500': rating >= 1, 'text-gray-300': rating < 1 }"
+                  class="cursor-pointer fas fa-star fa-lg"></span>
+                <span @click="setRating(2)" :class="{ 'text-yellow-500': rating >= 2, 'text-gray-300': rating < 2 }"
+                  class="cursor-pointer fas fa-star fa-lg"></span>
+                <span @click="setRating(3)" :class="{ 'text-yellow-500': rating >= 3, 'text-gray-300': rating < 3 }"
+                  class="cursor-pointer fas fa-star fa-lg"></span>
+                <span @click="setRating(4)" :class="{ 'text-yellow-500': rating >= 4, 'text-gray-300': rating < 4 }"
+                  class="cursor-pointer fas fa-star fa-lg"></span>
+                <span @click="setRating(5)" :class="{ 'text-yellow-500': rating >= 5, 'text-gray-300': rating < 5 }"
+                  class="cursor-pointer fas fa-star fa-lg"></span>
+              </div>
+            </div>
+
+            <!-- Botón de Enviar -->
+            <button @click="submitComment"
+              class="w-full py-2 text-white transition-colors duration-1000 ease-in-out rounded-md shadow-md"
+              :class="{ 'bg-sky-600 hover:bg-sky-700': role === 'dueño', 'bg-rose-600 hover:bg-rose-700': role === 'asesora' }">
+              <i class="mr-2 fas fa-paper-plane"></i> Enviar Historia <!-- Icono del botón de envío -->
+            </button>
+          </section>
+
+        </section>
+      </article>
 
     </template>
   </MainLayout>
@@ -104,7 +127,10 @@
 
 <script lang="ts" setup>
 import CommentCard from '@/components/comments/CommentCard.vue';
+import ContentLoading from '@/components/ContentLoading.vue';
 import MainLayout from '@/layouts/MainLayout.vue';
+import { useUserValues } from '@/stores/userValues';
+import { addDoc, collection, getFirestore, onSnapshot, orderBy, query, Timestamp } from 'firebase/firestore';
 
 const stories = [
   {
@@ -181,27 +207,95 @@ const storiesNana = [
   },
 ];
 
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
+import { toast } from 'vue3-toastify';
 
 const role = ref('dueño');  // Estado inicial como 'dueño'
-const comment = ref('');
+const title = ref('');
 const fullComment = ref('');
 const rating = ref(3);
 
 // Función para cambiar el rating
-const setRating = (star) => {
+const setRating = (star: number) => {
   rating.value = star;
 };
 
+const db = getFirestore();
 // Función para enviar el comentario
-const submitComment = () => {
-  // Aquí puedes manejar el envío del comentario y rating
-  console.log('Rol:', role.value);
-  console.log('Título del comentario:', comment.value);
-  console.log('Comentario completo:', fullComment.value);
-  console.log('Rating:', rating.value);
-  // Puedes enviar estos datos a Firebase u otro backend
+const submitComment = async () => {
+  if (title.value === '' || fullComment.value === '') {
+    toast.error('Por favor, complete todos los campos', {
+      autoClose: 2000,
+      theme: 'dark'
+    })
+    return
+  }
+
+  try {
+    const docRef = await addDoc(collection(db, "commentsBoss"), {
+      comment: fullComment.value,
+      date: Timestamp.now(),
+      name: useUserValues().getUserName,
+      rating: rating.value,
+      title: title.value,
+      role: role.value,
+      uid: useUserValues().getUserUid,
+    });
+    toast.info("Comentario enviado con exito", {
+      autoClose: 2000,
+      theme: "dark"
+    })
+    // clean form
+    title.value = '';
+    fullComment.value = '';
+    rating.value = 1;
+    console.log("Comentario añadido con ID: ", docRef.id);
+  } catch (e) {
+    console.error("Error añadiendo comentario: ", e);
+    toast.error(`Error al intentar agregar el comentario ${e}`, {
+      autoClose: 5000,
+      theme: "dark"
+
+    })
+  }
 };
+const commentsArray = ref([]);
+
+function listenToComments() {
+  const preComments = ref([]); // Array para almacenar los comentarios
+
+  const commentsRef = query(
+    collection(db, "commentsBoss"),
+    orderBy("date", "desc")  // Ordenando por la fecha (campo 'date') de manera descendente
+  );
+
+  onSnapshot(commentsRef, (snapshot) => {
+    preComments.value = []; // Limpiar el array antes de agregar nuevos comentarios
+
+    snapshot.forEach((doc) => {
+      preComments.value.push({ id: doc.id, ...doc.data() }); // Agregar los comentarios al array
+    });
+    commentsArray.value = preComments.value;
+    console.log("Comentarios actualizados:", preComments.value);
+    // Aquí podrías actualizar tu estado, mostrar en pantalla, etc.
+  }, (error) => {
+    console.error("Error escuchando los comentarios:", error);
+    toast.error(`Error al recibir los comentarios ${error}`, {
+      autoClose: 5000,
+      theme: "dark"
+
+    })
+  });
+}
+
+const toggleRole = (payload: string) => {
+  role.value = payload
+}
+onMounted(() => {
+  listenToComments()
+})
+
+
 </script>
 
 

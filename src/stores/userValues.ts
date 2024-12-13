@@ -7,6 +7,7 @@ export const useUserValues = defineStore("useUserValues", {
     showWelcome: false,
     firstAnimation: false,
     maintenanceMode: false,
+    userUid: "",
   }),
   getters: {
     isUserAuth(state): boolean {
@@ -23,6 +24,9 @@ export const useUserValues = defineStore("useUserValues", {
     },
     getMaintenanceMode(state): boolean {
       return state.maintenanceMode;
+    },
+    getUserUid(state): string {
+      return state.userUid;
     }
   },
   actions: {
@@ -37,6 +41,9 @@ export const useUserValues = defineStore("useUserValues", {
     },
     setFirstAnimation(firstAnimation: boolean): void {
       this.firstAnimation = firstAnimation;
+    },
+    setUserUid(userUid: string): void {
+      this.userUid = userUid;
     }
   }
 });
