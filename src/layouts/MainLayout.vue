@@ -2,6 +2,7 @@
   <div class="">
     <header class="sticky top-0 z-50 bg-white shadow-md font-poppins">
       <div class="container flex items-center justify-between px-6 py-4 mx-auto">
+        <img src="../assets/sslLogo.png" alt="Logo" class="absolute left-0 w-11" />
         <!-- Logo -->
         <div class="flex items-center space-x-3">
           <img src="../assets/img/header/retrowoman3.svg" alt="Logo" class="w-8" />
@@ -167,9 +168,7 @@
           Sitio gratuito y de uso exclusivo para revisar y compartir experiencias.
         </p>
         <p class="mb-4 text-gray-950">
-          Reclame con sus experiencias, descubra con las de otros. ¿Tiene algún reclamo? Comente
-          aquí sus experiencias y hagamos saber nuestras inconformidades acerca de un servicio,
-          empresa, producto, persona y más.
+         Comparta sus experiencias con los demás, sea asesora del hogar o sea empleador, este sitio es gratuito y seguro.
         </p>
       </div>
 
