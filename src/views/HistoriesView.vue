@@ -50,8 +50,13 @@
         <section class="py-5 bg-gray-50">
           <div class="py-8" id="comentar"></div>
           <section
-            class="w-11/12 p-6 mx-auto transition-colors duration-1000 ease-out bg-white border-4 rounded-lg shadow-lg font-poppins"
+            class="w-11/12 relative p-6 mx-auto transition-colors duration-1000 ease-out bg-white border-4 rounded-lg shadow-lg font-poppins"
             :class="role === 'dueño' ? 'border-sky-600' : 'border-rose-600'">
+            <section v-if="!useUserValues().isUserAuth" class="absolute transition-opacity duration-500  flex justify-center items-center top-0 left-0 right-0 bottom-0 bg-black bg-opacity-55 opacity-0 hover:opacity-100">
+              <RouterLink to="/login" class="flex items-center justify-center animate-bounce rounded-2xl p-3 text-white bg-sky-900">
+                <i class="mr-2 fas fa-lock"></i> Iniciar sesión
+              </RouterLink>
+            </section>
             <h2 class="mb-4 text-3xl font-semibold text-center "
               :class="role === 'dueño' ? 'text-sky-800' : 'text-rose-800'">Compartir historia</h2>
 
@@ -223,6 +228,14 @@ const setRating = (star: number) => {
 const db = getFirestore();
 // Función para enviar el comentario
 const submitComment = async () => {
+if(!useUserValues().isUserAuth){
+  toast.error('Por favor, inicia sesión para poder comentar', {
+    autoClose: 6000,
+    theme: 'dark'
+  })
+  return
+}
+
   if (title.value === '' || fullComment.value === '') {
     toast.error('Por favor, complete todos los campos', {
       autoClose: 2000,
@@ -249,7 +262,6 @@ const submitComment = async () => {
     title.value = '';
     fullComment.value = '';
     rating.value = 1;
-    console.log("Comentario añadido con ID: ", docRef.id);
   } catch (e) {
     console.error("Error añadiendo comentario: ", e);
     toast.error(`Error al intentar agregar el comentario ${e}`, {
@@ -276,7 +288,6 @@ function listenToComments() {
       preComments.value.push({ id: doc.id, ...doc.data() }); // Agregar los comentarios al array
     });
     commentsArray.value = preComments.value;
-    console.log("Comentarios actualizados:", preComments.value);
     // Aquí podrías actualizar tu estado, mostrar en pantalla, etc.
   }, (error) => {
     console.error("Error escuchando los comentarios:", error);

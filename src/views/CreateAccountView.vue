@@ -157,7 +157,6 @@ const createAccount = async () => {
   try {
     // Crear usuario con correo y contraseña
     const userValue = await createUserWithEmailAndPassword(auth, email.value, password.value);
-    console.log(userValue);
 
     // Actualizar el perfil del usuario con el nombre
     await updateProfile(userValue.user, {
@@ -188,7 +187,6 @@ const createAccount = async () => {
   } catch (error) {
     // Manejo de errores
     if (error.code === 'auth/email-already-in-use') {
-      console.log('El correo electrónico ya está en uso.');
       isModalOpened2.value = true;
     } else {
       console.log(`Error al crear la cuenta: ${error.message}`);

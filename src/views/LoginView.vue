@@ -114,17 +114,14 @@ const login = async () => {
   try {
     const userCredential = await signInWithEmailAndPassword(auth, email.value, password.value);
     const user = userCredential.user;
-    console.log(user);
 
     // setting user uid
     if(user.uid){
       useUserValues().setUserUid(user.uid);
-      console.log('user Uid', user.uid);
 
     }
     // Verificar si el correo está verificado
     if (user.emailVerified) {
-      console.log("El correo está verificado. Acceso permitido.");
       emailNotVerified.value = false;
       useUserValues().setUserAuth();
 
@@ -134,18 +131,13 @@ const login = async () => {
           notify();
         },200)
         router.push({ name: 'histories' });
-        console.log(storeUserValues.isUserAuthenticated);
       }
     }
     else {
-      console.log("El correo no está verificado. Por favor verifica tu correo.");
       emailNotVerified.value = true;
-      console.log(storeUserValues.isUserAuthenticated);
     }
 
   } catch (error) {
-    console.log(error);
-    console.log(storeUserValues.isUserAuthenticated);
     toast.error("Error al iniciar sesión. Por favor, verifique sus credenciales.", {
       position: toast.POSITION.TOP_RIGHT,
       theme:"dark",

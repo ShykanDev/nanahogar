@@ -90,7 +90,7 @@ const router = createRouter({
       name: 'histories',
       component: () => import('../views/HistoriesView.vue'),
       meta:{
-        requireAuth:true
+        requireAuth:false
       }
     },
     {
@@ -134,7 +134,6 @@ const router = createRouter({
 router.beforeEach((to, from, next) => {
   const isUserAuth = useUserValues().isUserAuth;
   const isMaintenanceMode = useUserValues().getMaintenanceMode;
-  console.log('maintenanceMode', isMaintenanceMode);
 
   // Si estamos en modo mantenimiento, pero no estamos ya en la página de mantenimiento
   if (isMaintenanceMode && to.name !== 'maintenance') {

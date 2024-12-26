@@ -48,9 +48,9 @@
             Si tienes alguna duda, no dudes en contactarnos a través del correo electrónico
             <a
               class="text-blue-500 transition duration-300 hover:text-blue-700"
-              href="mailto:informes@parasadan.mx"
+              href="mailto:informes@parasadam.mx"
             >
-              informes@parasadan.mx
+              informes@parasadam.mx
             </a>
           </p>
         </div>

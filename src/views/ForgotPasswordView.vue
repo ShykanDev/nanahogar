@@ -54,7 +54,6 @@ const restorePassword = async() => {
       position: toast.POSITION.TOP_RIGHT,
       autoClose: 50000
     });
-    console.log(user);
   } catch (error) {
     console.log(error);
   }
